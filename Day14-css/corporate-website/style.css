@@ -1,0 +1,103 @@
+.body{
+    background-color: #FFFFFF;
+    color: #333;
+}
+
+.p{
+    color: #333;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #333;
+}
+
+.hero{
+    text-align: center;
+
+    padding: 100px 20px;
+}
+
+.hero h1{
+    font-size: 50px;
+}
+
+.hero p{
+    color: #666;
+    font-size: 20px;
+}
+
+.btn{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0070f3;
+    color: white;
+    cursor: pointer;
+}
+
+.services{
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+}
+
+.card{
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.footer{
+    text-align: center;
+    padding: 50px;
+    background-color: #f5f5f5;
+    margin-top: 50px;
+}
+
+.card:hover{
+    border-color: #333;
+}
+
+.news{    
+    text-align: center;
+    padding: 50px;
+    background-color: #f5f5f5;
+    margin-top: 50px;
+}
+
+.news-row1, .news-row2{
+    flex: 1;
+}
+
+.news-container{
+    display: flex;
+    gap: 40px;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+
+.newsh2{
+    display: block;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
