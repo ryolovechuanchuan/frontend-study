@@ -1,0 +1,12 @@
+div{
+    color: aqua;
+    width: 500px;
+    max-height: 500px;
+    overflow: auto;
+    border: 1px solid black;
+}
+
+img{
+    max-width: 300px;
+}
+
