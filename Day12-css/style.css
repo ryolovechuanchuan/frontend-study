@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.skills{
+    display: flex;
+    gap: 30px;
+}
+
+.card{
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+img{
+    width: 300px;
+
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
