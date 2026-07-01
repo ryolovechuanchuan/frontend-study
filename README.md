@@ -58,54 +58,50 @@ I am currently transitioning from the banking industry to become a Frontend Engi
 
 ## 📚 Study Progress | 學習進度 | 学習進捗
 
-| Day   | Content                                 | Status |
-| ----- | --------------------------------------- | ------ |
-| Day1  | HTML Basics                             | ✅      |
-| Day2  | Div & Span                              | ✅      |
-| Day3  | List                                    | ✅      |
-| Day4  | Link & Image                            | ✅      |
-| Day5  | Table                                   | ✅      |
-| Day6  | Form                                    | ✅      |
-| Day7  | Portfolio v1                            | ✅      |
-| Day8  | CSS Basics                              | ✅      |
-| Day9  | Width & Height                          | ✅      |
-| Day10 | Margin & Padding                        | ✅      |
-| Day11 | Display                                 | ✅      |
-| Day12 | Flexbox                                 | ✅      |
-| Day13 | Flexbox Advanced                        | ✅      |
-| Day14 | Corporate Website                       | ✅      |
-| Day15 | JavaScript Variables & Data Types       | ✅      |
-| Day16 | JavaScript Operators & Template Literal | ✅      |
-| Day17 | Comparison Operators & If Statement     | ✅      |
-| Day18 | Logical Operators & Switch              | ✅      |
-| Day19 | Loop (for / while)                      | ✅      |
-| Day20 | Array & Object                          | ✅      |
-| Day21 | Function & Arrow Function               | ✅      |
-| Day22 | DOM Basics                              | ✅      |
-| Day23 | Input & Form Validation                 | ✅      |
-| Day24 | DOM Manipulation & Todo List            | ✅      |
-| Day25 | Keyboard Event & Event Object           | ✅      |
-| Day26 | LocalStorage & JSON                     | ✅      |
-| Day27 | Array Methods (forEach / map / filter)  | ⏳      |
-| Day28 | Destructuring & Spread Operator         | ⏳      |
-| Day29 | Promise                                 | ⏳      |
-| Day30 | Async / Await & Fetch API               | ⏳      |
+| Day   | Content (English)                      | 学習内容 (日本語)                 | Status |
+| ----- | -------------------------------------- | -------------------------- | ------ |
+| Day1  | HTML Basics                            | HTML基礎                     | ✅      |
+| Day2  | Div & Span                             | Div・Span要素                 | ✅      |
+| Day3  | Lists                                  | リスト                        | ✅      |
+| Day4  | Links & Images                         | リンク・画像                     | ✅      |
+| Day5  | Tables                                 | テーブル                       | ✅      |
+| Day6  | Forms                                  | フォーム                       | ✅      |
+| Day7  | Portfolio v1                           | ポートフォリオ v1                 | ✅      |
+| Day8  | CSS Basics                             | CSS基礎                      | ✅      |
+| Day9  | Width & Height                         | 幅・高さ                       | ✅      |
+| Day10 | Margin & Padding                       | Margin・Padding             | ✅      |
+| Day11 | Display                                | Displayプロパティ               | ✅      |
+| Day12 | Flexbox                                | Flexbox基礎                  | ✅      |
+| Day13 | Advanced Flexbox                       | Flexbox応用                  | ✅      |
+| Day14 | Corporate Website                      | コーポレートサイト制作                | ✅      |
+| Day15 | JavaScript Variables & Data Types      | JavaScript変数・データ型          | ✅      |
+| Day16 | Operators & Template Literal           | 演算子・テンプレートリテラル             | ✅      |
+| Day17 | Comparison Operators & If Statement    | 比較演算子・条件分岐                 | ✅      |
+| Day18 | Logical Operators & Switch             | 論理演算子・Switch文              | ✅      |
+| Day19 | Loops (for / while)                    | 繰り返し処理（for・while）          | ✅      |
+| Day20 | Array & Object                         | 配列・オブジェクト                  | ✅      |
+| Day21 | Function & Arrow Function              | 関数・アロー関数                   | ✅      |
+| Day22 | DOM Basics                             | DOM基礎                      | ✅      |
+| Day23 | Input & Form Validation                | Input・フォームバリデーション          | ✅      |
+| Day24 | DOM Manipulation & Todo List           | DOM操作・Todoリスト              | ✅      |
+| Day25 | Keyboard Event & Event Object          | キーボードイベント・Event Object     | ✅      |
+| Day26 | LocalStorage & JSON                    | LocalStorage・JSON          | ✅      |
+| Day27 | Array Methods (forEach / map / filter) | 配列メソッド（forEach・map・filter） | ⏳      |
+| Day28 | Destructuring & Spread Operator        | 分割代入・スプレッド構文               | ⏳      |
+| Day29 | Promise                                | Promise                    | ⏳      |
+| Day30 | Async / Await & Fetch API              | Async/Await・Fetch API      | ⏳      |
 
 ---
 
 ## 📁 Projects | 專案 | プロジェクト
 
-### Corporate Website
-Simple responsive company website.
-
-### Portfolio Website
-Personal portfolio website.
-
-### Weather Dashboard
-Coming Soon...
-
-### Job Search Platform
-Coming Soon...
+Project	Status
+Portfolio Website v1	✅
+Corporate Website	✅
+Todo App v1	✅
+Weather Dashboard	⏳
+Project Management App	⏳
+Job Search Platform	⏳
 
 ---
 
