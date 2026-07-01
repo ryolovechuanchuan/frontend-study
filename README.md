@@ -95,13 +95,14 @@ I am currently transitioning from the banking industry to become a Frontend Engi
 
 ## 📁 Projects | 專案 | プロジェクト
 
-Project	Status
-Portfolio Website v1	✅
-Corporate Website	✅
-Todo App v1	✅
-Weather Dashboard	⏳
-Project Management App	⏳
-Job Search Platform	⏳
+| Project                | Status |
+| ---------------------- | ------ |
+| Portfolio Website v1   | ✅      |
+| Corporate Website      | ✅      |
+| Todo App v1            | ✅      |
+| Weather Dashboard      | ⏳      |
+| Project Management App | ⏳      |
+| Job Search Platform    | ⏳      |
 
 ---
 
