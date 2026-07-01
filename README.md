@@ -58,23 +58,38 @@ I am currently transitioning from the banking industry to become a Frontend Engi
 
 ## 📚 Study Progress | 學習進度 | 学習進捗
 
-| Day | Content |
-|-----|----------|
-| Day1 | HTML Basics |
-| Day2 | Div & Span |
-| Day3 | List |
-| Day4 | Link & Image |
-| Day5 | Table |
-| Day6 | Form |
-| Day7 | Portfolio v1 |
-| Day8 | CSS Basics |
-| Day9 | Width & Height |
-| Day10 | Margin & Padding |
-| Day11 | Display |
-| Day12 | Flexbox |
-| Day13 | Flex Advanced |
-| Day14 | Corporate Website |
-| Day15 | JavaScript Variables |
+| Day   | Content                                 | Status |
+| ----- | --------------------------------------- | ------ |
+| Day1  | HTML Basics                             | ✅      |
+| Day2  | Div & Span                              | ✅      |
+| Day3  | List                                    | ✅      |
+| Day4  | Link & Image                            | ✅      |
+| Day5  | Table                                   | ✅      |
+| Day6  | Form                                    | ✅      |
+| Day7  | Portfolio v1                            | ✅      |
+| Day8  | CSS Basics                              | ✅      |
+| Day9  | Width & Height                          | ✅      |
+| Day10 | Margin & Padding                        | ✅      |
+| Day11 | Display                                 | ✅      |
+| Day12 | Flexbox                                 | ✅      |
+| Day13 | Flexbox Advanced                        | ✅      |
+| Day14 | Corporate Website                       | ✅      |
+| Day15 | JavaScript Variables & Data Types       | ✅      |
+| Day16 | JavaScript Operators & Template Literal | ✅      |
+| Day17 | Comparison Operators & If Statement     | ✅      |
+| Day18 | Logical Operators & Switch              | ✅      |
+| Day19 | Loop (for / while)                      | ✅      |
+| Day20 | Array & Object                          | ✅      |
+| Day21 | Function & Arrow Function               | ✅      |
+| Day22 | DOM Basics                              | ✅      |
+| Day23 | Input & Form Validation                 | ✅      |
+| Day24 | DOM Manipulation & Todo List            | ✅      |
+| Day25 | Keyboard Event & Event Object           | ✅      |
+| Day26 | LocalStorage & JSON                     | ✅      |
+| Day27 | Array Methods (forEach / map / filter)  | ⏳      |
+| Day28 | Destructuring & Spread Operator         | ⏳      |
+| Day29 | Promise                                 | ⏳      |
+| Day30 | Async / Await & Fetch API               | ⏳      |
 
 ---
 
