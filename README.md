@@ -86,9 +86,9 @@ I am currently transitioning from the banking industry to become a Frontend Engi
 | Day24 | DOM Manipulation & Todo List           | DOM操作・Todoリスト              | ✅      |
 | Day25 | Keyboard Event & Event Object          | キーボードイベント・Event Object     | ✅      |
 | Day26 | LocalStorage & JSON                    | LocalStorage・JSON          | ✅      |
-| Day27 | Array Methods (forEach / map / filter) | 配列メソッド（forEach・map・filter） | ⏳      |
-| Day28 | Destructuring & Spread Operator        | 分割代入・スプレッド構文               | ⏳      |
-| Day29 | Promise                                | Promise                    | ⏳      |
+| Day27 | Array Methods (forEach / map / filter) | 配列メソッド（forEach・map・filter） | ✅      |
+| Day28 | Destructuring & Spread Operator        | 分割代入・スプレッド構文               | ✅      |
+| Day29 | Promise                                | Promise                    | ✅     |
 | Day30 | Async / Await & Fetch API              | Async/Await・Fetch API      | ⏳      |
 
 ---
