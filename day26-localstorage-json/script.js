@@ -49,8 +49,8 @@ function createTodo(text) {
 }
 
 
-// 新增按鈕
-addbtn.addEventListener("click", function(){
+    // 新增按鈕
+    addbtn.addEventListener("click", function(){
     const text = input.value.trim();
     if(text === "") return;
 
