@@ -10,7 +10,7 @@
 大家好，我是 Ryo，目前正從銀行業轉職成為前端工程師，目標是在日本擔任 Frontend Engineer。
 
 ### English
-Hi, I'm Tom from Taiwan.
+Hi, I'm Ryo from Taiwan.
 I am currently transitioning from the banking industry to become a Frontend Engineer in Japan.
 
 ### 日本語
