@@ -1,0 +1,106 @@
+/* 全域基本設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* 背景置中 */
+body {
+    background-color: #f5f7fb;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+/* 主容器：簡單的白底卡片加陰影 */
+.todo-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 標題 */
+.todo-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 輸入框與按鈕的區塊（左右並排） */
+.input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.todo-input:focus {
+    border-color: #4a90e2; /* 點擊時變成藍色邊框 */
+}
+
+/* 新增按鈕 */
+.todo-add-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.todo-add-btn:hover {
+    background-color: #357abd;
+}
+
+/* 待辦事項清單 */
+.todo-list {
+    list-style: none;
+}
+
+/* 每一筆待辦事項 */
+.todo-list li {
+    display: flex;
+    align-items: center;
+    padding: 12px 8px;
+    border-bottom: 1px solid #eee; /* 每條事項之間的底線 */
+    color: #444;
+}
+
+.todo-list li span{
+    margin-right: auto;
+}
+
+/* 清單內的按鈕通用樣式 */
+.todo-list li button {
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 6px;
+    font-size: 0.8rem;
+}
+
+/* 刪除按鈕（第一個按鈕） */
+.todo-list li button:nth-of-type(1) {
+    background-color: white;
+    color: #ff4d4f;
+}
+
+/* 完成按鈕（第二個按鈕） */
+.todo-list li button:nth-of-type(2) {
+    background-color: white;
+    color: #1890ff;
+}

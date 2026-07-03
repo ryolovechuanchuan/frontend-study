@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day26</title>
+    <title>Day26 - Modern Todo List</title>
+    <!-- 引入外部的 style.css -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    <h1 id="h1">共有0個資料</h1>
-    <input type="text" id="todoInput">
-    <button id="addbtn">新增</button>
-    <ul id="list"></ul>
+    <!-- 加上一個主卡片容器，讓作品集視覺更集中美觀 -->
+    <div class="todo-container">
+        <h1 id="h1" class="todo-title">共有0個資料</h1>      
+        <div class="input-group">
+            <input type="text" id="todoInput" class="todo-input" placeholder="請輸入待辦事項...">
+            <button id="addbtn" class="todo-add-btn">新增</button>
+        </div>
 
+        <ul id="list" class="todo-list"></ul>
+    </div>
 
     <script src="./script.js"></script>
 </body>

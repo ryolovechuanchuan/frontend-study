@@ -14,7 +14,8 @@ h1.innerText = `共有${list.children.length}個資料`;
 // 定義一個專門建立待辦事項畫面的函式
 function createTodo(text) {
     const li = document.createElement("li");
-    li.innerText = text;
+    const span = document.createElement("span")
+    span.innerText = text;
 
     const deletebtn = document.createElement("button");
     deletebtn.innerText = "刪除";
@@ -40,11 +41,11 @@ function createTodo(text) {
 
     // 完成按鈕
     finishbtn.addEventListener("click", function(){
-        li.style.color = "grey";
-        li.style.textDecoration = "line-through";
+        span.style.color = "grey";
+        span.style.textDecoration = "line-through";
     });
 
-    li.append(deletebtn, finishbtn);
+    li.append(span,deletebtn,finishbtn);
     list.append(li);
 }
 
