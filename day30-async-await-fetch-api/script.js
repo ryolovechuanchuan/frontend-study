@@ -23,6 +23,10 @@ btn.addEventListener("click",
         const username = input.value.trim();
         try{
             const respone = await fetch(`https://api.github.com/users/${username}`);
+            
+            if(!respone.ok){
+                throw new Error = ("找不到使用者");
+            }
             const data = await respone.json();
             showdata.innerHTML=
             `
@@ -33,7 +37,7 @@ btn.addEventListener("click",
             <p>Public_repos：${data.public_repos}</p>
             `;
         }catch(error){
-        console.log("失敗");
+        console.log(error.message);
     }
     }
 )
