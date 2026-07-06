@@ -15,7 +15,7 @@ I am currently transitioning from the banking industry to become a Frontend Engi
 
 ### 日本語
 こんにちは、Ryoです。
-現在、銀行業界からフロントエンドエンジニアへの転職を目指して勉強しています。
+現在、銀行の情報システム部からフロントエンドエンジニアへの転職を目指して勉強しています。
 将来は日本で働くことが目標です。
 
 ---
