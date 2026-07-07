@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Playground</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>🌐 API Playground</h1>
+
+        <!-- 深色模式按鈕 -->
+        <button id="themeBtn">🌙</button>
+      </header>
+
+      <!-- API 按鈕區 -->
+      <section class="api-buttons">
+        <button id="dogBtn">🐶 SHOW DOG IMG</button>
+        <button id="catBtn">😺 SHOW CAT IMG</button>
+        <button id="jokeBtn">😂 SHOW JOKE</button>
+      </section>
+
+      <!-- 電影搜尋區 -->
+      <section class="movie-search">
+        <input
+          id="movieInput"
+          type="text"
+          placeholder="輸入電影名稱，例如 Batman"
+        />
+
+        <button id="movieBtn">🎬 搜尋電影</button>
+      </section>
+
+      <!-- 最近搜尋紀錄 -->
+      <section class="history-box">
+        <h2>最近搜尋</h2>
+        <div id="historyList"></div>
+      </section>
+
+      <!-- 訊息顯示 -->
+      <p id="message"></p>
+
+      <!-- API 結果顯示 -->
+      <section id="result"></section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
