@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📝 Todo App</h1>
+
+      <div class="input-box">
+        <input id="taskInput" placeholder="輸入待辦事項" />
+
+        <button id="addBtn">新增</button>
+      </div>
+
+      <div class="tools">
+        <input id="searchInput" placeholder="搜尋任務" />
+
+        <select id="filter">
+          <option value="all">全部</option>
+
+          <option value="completed">已完成</option>
+
+          <option value="active">未完成</option>
+        </select>
+      </div>
+
+      <div id="todoList"></div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
