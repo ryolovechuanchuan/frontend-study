@@ -1,11 +1,23 @@
-## Day39 - Calculator App
+# Calculator
 
-### Features
+A simple calculator built with HTML, CSS, and JavaScript.
 
-- Basic arithmetic operations (+, -, *, /)
-- Input validation
-- Prevent consecutive operators
-- Delete (DEL)
-- All Clear (AC)
-- Error handling
-- Event Delegation
+## Features
+
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Delete
+- All Clear
+- Error Handling
+- Continuous "=" Calculation
+- Decimal Input
+
+## Technologies
+
+- HTML
+- CSS
+- JavaScript
+
+## Demo

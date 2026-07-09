@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f2f2f2;
+  font-family: '微軟正黑體';
+}
+
+.container {
+  width: 360px;
+  margin: 60px auto;
+}
+
+#display {
+  height: 80px;
+  background: #222;
+  color: white;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-size: 40px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+}
+
+.tools {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tools button {
+  flex: 1;
+}
+
+#btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  height: 70px;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
