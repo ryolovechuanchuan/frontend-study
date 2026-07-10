@@ -72,7 +72,7 @@ btns.addEventListener('click', function (event) {
     state = STATE.INPUT;
     return;
   }
-
+  /* -------------------------------- 輸入 . 的情況 -------------------------------- */
   if (value === '.') {
     const expression = display.innerText; //12.3+4
     const operator = operators.find((op) => expression.includes(op)); //12.3+4  有+-*/  回傳true

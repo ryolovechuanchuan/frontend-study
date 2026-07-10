@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Day40</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Todo List</h1>
+
+      <div>
+        <div id="show">現在有0個待辦事項</div>
+        <input type="text" id="todoInput" placeholder="請輸入待辦事項" />
+        <button id="addBtn">新增</button>
+        <button id="cancelEditBtn" hidden>取消編輯</button>
+        <button id="deletecompletedBtn">清除已完成事項</button>
+
+        <select id="filterSelect">
+          <option value="all">全部</option>
+          <option value="active">未完成</option>
+          <option value="completed">已完成</option>
+        </select>
+      </div>
+      <ul id="todoList"></ul>
+    </div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
