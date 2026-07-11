@@ -4,17 +4,6 @@ A simple Todo List application built with Vanilla JavaScript.
 
 ---
 
-## 🚀 Live Demo
-
-https://你的githubpages網址
-
----
-
-## 📷 Screenshot
-
-(放一張畫面截圖)
-
----
 
 ## ✨ Features
 
