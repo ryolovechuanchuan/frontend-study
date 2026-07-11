@@ -7,7 +7,7 @@ const show = document.getElementById('show');
 const filterSelect = document.getElementById('filterSelect');
 
 let currentFilter = 'all'; //預設搜尋欄是"全部"
-let editingId = null;
+let editingId = null; //預設編輯狀態 null
 
 /* ------------------- localStorage設定 讓網頁重新整理或第一次登入可以撈取資料 ------------------- */
 let todos = JSON.parse(localStorage.getItem('todos')) || [];
@@ -24,31 +24,70 @@ filterSelect.addEventListener('change', function (event) {
 /* ---------------------------------- 更新畫面 ---------------------------------- */
 function render() {
   let filterTodos = todos;
+
   const activeTodos = todos.filter((todo) => !todo.completed);
   const activeNumber = activeTodos.length;
 
+  /* ------------------------ 如果清單中沒有已完成事項  讓清除已完成按鈕隱藏 ------------------------ */
+  const completedTodos = todos.filter((todo) => todo.completed);
+  deletecompletedBtn.disabled = completedTodos.length === 0;
+
+  /* --------------------------------- 未完成狀態清單 -------------------------------- */
   if (currentFilter === 'active') {
     filterTodos = todos.filter((todo) => !todo.completed);
   }
-
+  /* --------------------------------- 已完成狀態清單 -------------------------------- */
   if (currentFilter === 'completed') {
     filterTodos = todos.filter((todo) => todo.completed);
   }
 
-  const html = filterTodos
-    .map(
-      (todo) => `
-  <li>
-    <span class = "${todo.completed ? 'completed' : ''}">${todo.text}</span>
-    <button class = "edit-btn" data-id = "${todo.id}">編輯</button>
-    <button class ="delete-btn" data-id = "${todo.id}">刪除</button>
-    <button class = "complete-btn" data-id = "${todo.id}">✔</button>
-  </li>
-  `,
-    )
-    .join('');
-  todoList.innerHTML = html;
-  show.innerText = `現在有${activeNumber}個待辦事項`;
+  // 先處理空狀態
+  if (filterTodos.length === 0) {
+    let message = '';
+
+    if (currentFilter === 'all') {
+      message = '快新增第一個 Todo 吧！';
+    }
+
+    if (currentFilter === 'active') {
+      message = '目前沒有未完成事項';
+    }
+
+    if (currentFilter === 'completed') {
+      message = '目前沒有已完成事項';
+    }
+
+    todoList.innerHTML = `
+      <li class="empty">${message}</li>
+    `;
+  } else {
+    // 有資料時才建立 Todo HTML
+    todoList.innerHTML = filterTodos
+      .map(
+        (todo) => `
+          <li>
+            <span class="${todo.completed ? 'completed' : ''}">
+              ${todo.text}
+            </span>
+
+            <button class="edit-btn" data-id="${todo.id}">
+              編輯
+            </button>
+
+            <button class="delete-btn" data-id="${todo.id}">
+              刪除
+            </button>
+
+            <button class="complete-btn" data-id="${todo.id}">
+              ✔
+            </button>
+          </li>
+        `,
+      )
+      .join('');
+  }
+
+  show.innerText = `現在有 ${activeNumber} 個待辦事項`;
 }
 
 /* ---------------------------------- 新增選項 ---------------------------------- */
@@ -64,11 +103,9 @@ function addTodo() {
     if (!todo) {
       return;
     }
-    todo.text = text;
-    editingId = null;
-    cancelEditBtn.hidden = true;
-    addBtn.innerText = '新增';
 
+    todo.text = text;
+    resetEditMode();
     saveTodos();
     render();
     todoInput.value = '';
@@ -90,22 +127,20 @@ addBtn.addEventListener('click', addTodo);
 
 /* --------------------------------- 取消編輯按鈕 --------------------------------- */
 cancelEditBtn.addEventListener('click', function () {
-  editingId = null;
-  todoInput.value = '';
-  addBtn.innerText = '新增';
+  resetEditMode();
   todoInput.focus();
-  cancelEditBtn.hidden = true;
 });
 
 /* --------------------------------- 刪除已完成事項 -------------------------------- */
 deletecompletedBtn.addEventListener('click', function () {
+  if (!confirm('確定要刪除所有筆待辦事項嗎?')) {
+    return;
+  }
+
   // 只留下「未完成」的事項 (completed 為 false)
   todos = todos.filter((todo) => !todo.completed);
 
-  editingId = null;
-  todoInput.value = '';
-  addBtn.innerText = '新增';
-  cancelEditBtn.hidden = true;
+  resetEditMode();
   saveTodos();
   render();
 });
@@ -115,13 +150,14 @@ todoList.addEventListener('click', function (event) {
   const id = Number(event.target.dataset.id);
 
   if (event.target.classList.contains('delete-btn')) {
+    if (!confirm('確定要刪除這筆待辦事項嗎?')) {
+      return;
+    }
+
     todos = todos.filter((todo) => todo.id !== id);
 
     if (editingId === id) {
-      editingId = null;
-      todoInput.value = '';
-      addBtn.innerText = '新增';
-      cancelEditBtn.hidden = true;
+      resetEditMode();
     }
     saveTodos();
     render();
@@ -136,6 +172,7 @@ todoList.addEventListener('click', function (event) {
     todo.completed = !todo.completed;
     saveTodos();
     render();
+    return;
   }
 
   if (event.target.classList.contains('edit-btn')) {
@@ -159,5 +196,13 @@ todoInput.addEventListener('keydown', function (event) {
     addTodo();
   }
 });
+
+/* ------------------------------- 重製EditBtn狀態 ------------------------------ */
+function resetEditMode() {
+  editingId = null;
+  todoInput.value = '';
+  addBtn.innerText = '新增';
+  cancelEditBtn.hidden = true;
+}
 
 render();

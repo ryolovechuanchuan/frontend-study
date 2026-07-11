@@ -1,30 +1,43 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Day40</title>
+    <title>Todo List</title>
   </head>
+
   <body>
-    <div id="container">
-      <h1>Todo List</h1>
+    <main class="container">
+      <h1 class="h1">Todo List</h1>
 
-      <div>
-        <div id="show">現在有0個待辦事項</div>
+      <!-- 剩餘數量 -->
+      <p id="show">現在有 0 個待辦事項</p>
+
+      <!-- 輸入區 -->
+      <div class="input-area">
         <input type="text" id="todoInput" placeholder="請輸入待辦事項" />
-        <button id="addBtn">新增</button>
-        <button id="cancelEditBtn" hidden>取消編輯</button>
-        <button id="deletecompletedBtn">清除已完成事項</button>
 
+        <button id="addBtn">新增</button>
+
+        <button id="cancelEditBtn" hidden>取消編輯</button>
+      </div>
+
+      <!-- 工具區 -->
+      <div class="tools">
         <select id="filterSelect">
           <option value="all">全部</option>
           <option value="active">未完成</option>
           <option value="completed">已完成</option>
         </select>
+
+        <button id="deletecompletedBtn">清除已完成事項</button>
       </div>
+
+      <!-- Todo 清單 -->
       <ul id="todoList"></ul>
-    </div>
+    </main>
+
     <script src="./script.js" defer></script>
   </body>
 </html>
