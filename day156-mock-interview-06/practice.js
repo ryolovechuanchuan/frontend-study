@@ -1,8 +1,0 @@
-// Day 156 - Mock Interview 6
-// Practice
-
-// TODO 1:
-// TODO 2:
-// TODO 3:
-// TODO 4:
-// TODO 5:
