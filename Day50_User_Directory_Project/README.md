@@ -1,70 +1,140 @@
-# Day50_User_Directory_Project
+# 👤 User Directory Project
 
-## 🇹🇼 中文
+## 中文
 
-### 今日主題
-User Directory Project
+一個使用 **Random User API** 建立的使用者資訊卡片，透過 Fetch API 取得隨機使用者資料，並將資料顯示於畫面中。本專案主要練習 API 串接、非同步程式設計、DOM 操作、Error Handling 與程式重構。
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+### 功能
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+- 使用 Fetch API 取得使用者資料
+- 使用 Async / Await 非同步請求
+- 顯示使用者照片
+- 顯示姓名
+- 顯示 Email
+- 顯示國家
+- 首次載入自動取得使用者
+- 點擊按鈕取得新使用者
+- Loading 狀態提示
+- API 錯誤處理
+- Loading 時按鈕禁止重複點擊
+- 使用 `renderUser()` 分離畫面更新（Single Responsibility）
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+### 使用技術
 
-### 建議 Commit
-```bash
-git commit -m "Day50 User Directory Project"
-```
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Fetch API
+- Async / Await
+- Random User API
 
----
+### 學習重點
 
-## 🇺🇸 English
-
-### Topic
-User Directory Project
-
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
-
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
-
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+- Fetch API
+- Promise
+- Async / Await
+- Error Handling
+- JSON 資料解析
+- DOM 操作
+- API 串接
+- Function Refactoring
+- Single Responsibility Principle (SRP)
 
 ---
 
-## 🇯🇵 日本語
+## English
 
-### テーマ
-User Directory Project
+A simple user profile application built with the **Random User API**. This project focuses on API integration, asynchronous programming, DOM manipulation, error handling, and code refactoring.
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+### Features
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+- Fetch user data using Fetch API
+- Async/Await asynchronous requests
+- Display user photo
+- Display full name
+- Display email
+- Display country
+- Automatically load a user on page load
+- Generate a new user with one click
+- Loading state
+- Error handling
+- Disable button while loading
+- Separate UI rendering with `renderUser()` (Single Responsibility)
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+### Technologies
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Fetch API
+- Async / Await
+- Random User API
+
+### What I Learned
+
+- Fetch API
+- Promise
+- Async / Await
+- Error Handling
+- JSON Parsing
+- DOM Manipulation
+- API Integration
+- Function Refactoring
+- Single Responsibility Principle (SRP)
+
+---
+
+## 日本語
+
+**Random User API** を利用してユーザー情報を取得・表示するアプリです。API 連携、非同期処理、DOM 操作、エラーハンドリング、コードのリファクタリングを学習することを目的としています。
+
+### 主な機能
+
+- Fetch API によるユーザー情報取得
+- Async / Await を使用した非同期処理
+- ユーザー画像表示
+- 氏名表示
+- メールアドレス表示
+- 国名表示
+- ページ読み込み時に自動取得
+- ボタンで新しいユーザーを取得
+- Loading 状態表示
+- エラーハンドリング
+- Loading 中はボタンを無効化
+- `renderUser()` による画面描画の分離（単一責任）
+
+### 使用技術
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Fetch API
+- Async / Await
+- Random User API
+
+### 学習内容
+
+- Fetch API
+- Promise
+- Async / Await
+- Error Handling
+- JSON データ解析
+- DOM 操作
+- API 連携
+- 関数のリファクタリング
+- 単一責任の原則（SRP）
+
+---
+
+## Future Improvements
+
+- Search users by country（國家搜尋）
+- Favorite users（收藏功能）
+- Dark Mode（深色模式）
+- Loading Spinner
+- Skeleton Loading
+- Better Responsive Design（RWD 優化）
+- TypeScript Version
+- React Version
+
+---
