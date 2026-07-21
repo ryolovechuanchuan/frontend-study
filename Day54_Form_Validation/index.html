@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Day54 Form Validation</title>
+  </head>
+  <body>
+    <form id="registerForm">
+      <h1>Day54 Form Validation</h1>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+        <small class="error-message" id="nameError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+        <small class="error-message" id="emailError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+        <small class="error-message" id="passwordError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" />
+        <small class="error-message" id="confirmError"></small>
+      </div>
+
+      <button type="submit">Register</button>
+
+      <p id="successMessage"></p>
+    </form>
+    <script src="./javascript.js"></script>
+  </body>
+</html>
