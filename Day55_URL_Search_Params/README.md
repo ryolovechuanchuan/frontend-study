@@ -1,70 +1,233 @@
-# Day55_URL_Search_Params
+# 🔍 Day55 - URL Search Params
 
-## 🇹🇼 中文
+---
 
-### 今日主題
-URL Search Params
+# 🇹🇼 中文
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+## 📖 專案介紹
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+這是 **180 天前端工程師學習計畫 Day55** 的作品。
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+本專案學習如何使用 **URL Search Params** 建立搜尋功能，將使用者輸入的關鍵字同步到網址中，並在重新整理頁面後，自動從 URL 讀取搜尋內容並顯示於畫面上。
 
-### 建議 Commit
-```bash
-git commit -m "Day55 URL Search Params"
+透過本專案，我更加理解了網址參數（Query String）的運作方式，以及 JavaScript 如何操作瀏覽器網址。
+
+---
+
+## 🚀 功能
+
+- Keyword 搜尋功能
+- URL Query String 操作
+- URLSearchParams 讀取網址參數
+- 自動還原搜尋內容
+- Enter 鍵搜尋
+- Search Button 搜尋
+- 空白輸入驗證
+- Responsive Layout
+- 動態搜尋結果顯示
+
+---
+
+## 🛠️ 使用技術
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- DOM Manipulation
+- URLSearchParams
+- Template Literal
+- encodeURIComponent()
+- Event Listener
+- Responsive Web Design
+
+---
+
+## 📚 學習重點
+
+- window.location.search
+- URLSearchParams
+- params.get()
+- window.location.href
+- Query String
+- Template Literal
+- encodeURIComponent()
+- Event Listener
+- Function Refactoring
+- DOM Manipulation
+
+---
+
+## 💡 學習心得
+
+透過這個專案，我學會了如何利用 URL Search Params 建立搜尋功能，讓使用者輸入的關鍵字能同步到網址中，並在重新整理頁面後保留搜尋內容。
+
+此外，我也開始理解如何將重複使用的程式碼抽成 function，讓按鈕點擊與 Enter 搜尋共用相同邏輯，提高程式的可讀性與維護性。
+
+---
+
+# 🇺🇸 English
+
+## 📖 Project Description
+
+This project is part of my **180-Day Front-End Developer Roadmap (Day 55).**
+
+The goal of this project is to learn how to use **URL Search Params** to create a simple search feature.
+
+Users can enter a keyword, which will be stored in the URL. After refreshing the page, the keyword is automatically restored from the URL.
+
+---
+
+## 🚀 Features
+
+- Keyword Search
+- URL Query String
+- URLSearchParams
+- Restore Search Keyword
+- Enter Key Search
+- Search Button
+- Empty Input Validation
+- Responsive Layout
+- Dynamic Search Result
+
+---
+
+## 🛠️ Technologies
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- DOM Manipulation
+- URLSearchParams
+- Template Literals
+- encodeURIComponent()
+- Event Listener
+- Responsive Web Design
+
+---
+
+## 📚 What I Learned
+
+- URL Query Strings
+- window.location.search
+- URLSearchParams
+- params.get()
+- window.location.href
+- Template Literals
+- Function Refactoring
+- DOM Manipulation
+- Event Handling
+
+---
+
+## 💡 Reflection
+
+This project helped me understand how modern websites preserve search keywords using URL parameters.
+
+I also learned how to separate reusable logic into functions, allowing both the Search button and the Enter key to share the same search behavior.
+
+---
+
+# 🇯🇵 日本語
+
+## 📖 プロジェクト概要
+
+このプロジェクトは **180日間フロントエンド学習計画 Day55** の課題です。
+
+JavaScript の **URL Search Params** を利用して、検索機能を実装しました。
+
+入力したキーワードを URL に保存し、ページを再読み込みしても検索内容を復元できる仕組みを学びました。
+
+---
+
+## 🚀 主な機能
+
+- キーワード検索
+- URL Query String
+- URLSearchParams
+- 検索キーワードの復元
+- Enterキー検索
+- Searchボタン検索
+- 空入力チェック
+- レスポンシブ対応
+- 検索結果表示
+
+---
+
+## 🛠️ 使用技術
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- DOM操作
+- URLSearchParams
+- Template Literal
+- encodeURIComponent()
+- Event Listener
+- Responsive Web Design
+
+---
+
+## 📚 学習内容
+
+- window.location.search
+- URLSearchParams
+- params.get()
+- window.location.href
+- Query String
+- Template Literal
+- Functionの分割（リファクタリング）
+- DOM操作
+- イベント処理
+
+---
+
+## 💡 学んだこと
+
+このプロジェクトでは、URL パラメータを利用した検索機能の基本を学びました。
+
+また、Enterキー検索とボタン検索の処理を共通の function にまとめることで、コードの可読性と保守性を向上させる方法も理解できました。
+
+---
+
+# 📂 Project Structure
+
+```text
+Day55_URL_Search_Params/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
 ```
 
 ---
 
-## 🇺🇸 English
+# 🚀 Future Improvements
 
-### Topic
-URL Search Params
-
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
-
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
-
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+- Search History
+- Multiple Query Parameters
+- Filter Function
+- Sort Function
+- Pagination
+- API Integration
+- Search Suggestions
+- Local Storage
+- Dark Mode
 
 ---
 
-## 🇯🇵 日本語
+# 🔥 GitHub Topics
 
-### テーマ
-URL Search Params
-
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
-
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
-
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+```text
+html
+css
+javascript
+urlsearchparams
+query-string
+search
+frontend
+dom
+event-listener
+responsive-design
+web-development
+```
