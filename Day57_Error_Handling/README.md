@@ -1,70 +1,170 @@
-# Day57_Error_Handling
+📖 專案介紹
 
-## 🇹🇼 中文
+這是一個使用 GitHub REST API 製作的 GitHub 使用者搜尋工具。
 
-### 今日主題
+使用者輸入 GitHub 帳號後，即可取得公開資訊並顯示於畫面上。
+
+本專案主要練習：
+
+Fetch API
+Async / Await
 Error Handling
+try / catch / finally
+DOM 操作
+Template Literals
+API 串接
+Event Handling
+Loading UI
+✨ 功能
+🔍 搜尋 GitHub 使用者
+👤 顯示頭像（Avatar）
+📝 顯示姓名（Name）
+👨‍💻 顯示帳號（Login）
+👥 顯示 Followers
+➕ 顯示 Following
+⌨️ 支援 Enter 搜尋
+⏳ Loading 狀態
+❌ 搜尋失敗時顯示錯誤訊息
+📱 響應式設計（Responsive Design）
+🛠️ 使用技術
+HTML5
+CSS3
+JavaScript (ES6+)
+Fetch API
+GitHub REST API
+📚 學習重點
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+本專案學習了：
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+使用 Fetch API 呼叫 REST API
+使用 async / await 處理非同步
+使用 try / catch 處理錯誤
+使用 response.ok 判斷 API 是否成功
+使用 JSON 資料更新畫面
+DOM 操作
+Template Literals
+Enter 鍵事件處理
+Button Disabled 防止重複點擊
+🚀 Future Improvements
+顯示 Bio
+顯示 Public Repositories
+顯示 Company
+顯示 Location
+加入 GitHub 個人頁連結
+Loading Spinner
+Dark Mode
+收藏搜尋紀錄（Local Storage）
+🇺🇸 README (English)
+Day57 - GitHub User Search
+📖 Overview
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+A simple GitHub User Search application built with the GitHub REST API.
 
-### 建議 Commit
-```bash
-git commit -m "Day57 Error Handling"
-```
+Users can search for any GitHub account and display public profile information.
 
----
+This project focuses on practicing:
 
-## 🇺🇸 English
-
-### Topic
+Fetch API
+Async / Await
 Error Handling
+try / catch / finally
+DOM Manipulation
+Template Literals
+API Integration
+Event Handling
+✨ Features
+🔍 Search GitHub users
+👤 Display avatar
+📝 Display name
+👨‍💻 Display login
+👥 Display followers
+➕ Display following
+⌨️ Search by pressing Enter
+⏳ Loading state
+❌ Error handling
+📱 Responsive layout
+🛠️ Technologies
+HTML5
+CSS3
+JavaScript (ES6+)
+Fetch API
+GitHub REST API
+📚 What I Learned
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
+During this project I practiced:
 
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
-
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
-
----
-
-## 🇯🇵 日本語
-
-### テーマ
+Fetching data from REST APIs
+Async / Await
 Error Handling
+try / catch / finally
+Working with JSON data
+DOM Manipulation
+Event Handling
+Response validation (response.ok)
+Preventing duplicate requests using disabled buttons
+🚀 Future Improvements
+Show Bio
+Show Public Repositories
+Show Company
+Show Location
+Add GitHub Profile Link
+Loading Spinner
+Dark Mode
+Search History (Local Storage)
+🇯🇵 README（日本語）
+Day57 - GitHub User Search
+📖 プロジェクト概要
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+GitHub REST API を利用して作成した GitHub ユーザー検索アプリです。
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+ユーザー名を入力すると、GitHub の公開プロフィール情報を取得して表示します。
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+本プロジェクトでは以下の技術を学習しました。
+
+Fetch API
+Async / Await
+Error Handling
+try / catch / finally
+DOM操作
+Template Literals
+API連携
+イベント処理
+✨ 主な機能
+🔍 GitHubユーザー検索
+👤 アバター表示
+📝 名前表示
+👨‍💻 ログイン名表示
+👥 Followers表示
+➕ Following表示
+⌨️ Enterキーで検索
+⏳ ローディング表示
+❌ エラーメッセージ表示
+📱 レスポンシブ対応
+🛠️ 使用技術
+HTML5
+CSS3
+JavaScript (ES6+)
+Fetch API
+GitHub REST API
+📚 学習内容
+
+このプロジェクトを通して学んだこと
+
+Fetch API を利用したデータ取得
+Async / Await
+try / catch による例外処理
+response.ok によるレスポンス判定
+JSONデータの利用
+DOM操作
+Template Literals
+Enterキーイベント処理
+ボタンの二重クリック防止
+🚀 今後の改善予定
+Bio の表示
+Public Repositories の表示
+Company の表示
+Location の表示
+GitHubプロフィールへのリンク追加
+Loading Spinner
+ダークモード対応
+Local Storage による検索履歴保存
