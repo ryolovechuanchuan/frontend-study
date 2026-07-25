@@ -1,70 +1,210 @@
-# Day59_Refactor_Project
+# Day59 - JavaScript Refactor Project
 
-## 🇹🇼 中文
+---
 
-### 今日主題
-Refactor Project
+# 🇹🇼 中文
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+## 📖 專案介紹
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+本專案針對 Day58 的 Employee CRUD 系統進行重構（Refactor）。
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+在不改變原有功能的前提下，重新整理程式架構、改善函式命名、降低程式重複度，提升程式的可讀性、維護性與擴充性。
 
-### 建議 Commit
-```bash
-git commit -m "Day59 Refactor Project"
+---
+
+## ✨ 功能
+
+- ➕ 新增員工
+- 📋 顯示員工列表
+- ✏️ 編輯員工
+- 🗑️ 刪除員工
+- 💾 Local Storage 資料保存
+- ✅ 表單驗證
+- 🔄 即時重新渲染畫面
+- 🧹 程式重構（Refactor）
+
+---
+
+## 🛠️ 使用技術
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Local Storage
+
+---
+
+## 📚 Refactor 重點
+
+- 將大型函式拆分為單一職責（Single Responsibility）的函式
+- 集中管理 Local Storage 操作
+- 改善函式命名，提高可讀性
+- 分離 Create / Update 邏輯
+- 分離 Edit / Delete 事件綁定
+- 降低重複程式碼（DRY）
+- 提升程式維護性與擴充性
+
+---
+
+## 📖 學習內容
+
+- Code Refactoring
+- Clean Code
+- Single Responsibility Principle (SRP)
+- DRY (Don't Repeat Yourself)
+- Function Extraction
+- Event Binding
+- CRUD Architecture
+- DOM Manipulation
+- Form Validation
+- Local Storage
+
+---
+
+# 🇺🇸 English
+
+## 📖 Overview
+
+This project is a refactored version of the Employee CRUD application built in Day58.
+
+Without changing the existing functionality, the project improves code structure, readability, maintainability, and scalability by applying clean coding principles.
+
+---
+
+## ✨ Features
+
+- ➕ Add Employee
+- 📋 Display Employee List
+- ✏️ Edit Employee
+- 🗑️ Delete Employee
+- 💾 Local Storage Persistence
+- ✅ Form Validation
+- 🔄 Dynamic Rendering
+- 🧹 Refactored Project Structure
+
+---
+
+## 🛠️ Technologies
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Local Storage
+
+---
+
+## 📚 Refactoring Highlights
+
+- Split large functions into single-responsibility functions
+- Centralized Local Storage operations
+- Improved function naming
+- Separated Create / Update logic
+- Separated Edit / Delete event binding
+- Reduced duplicated code (DRY)
+- Improved readability and maintainability
+
+---
+
+## 📖 What I Learned
+
+- Code Refactoring
+- Clean Code
+- Single Responsibility Principle
+- DRY Principle
+- Function Extraction
+- Event Binding
+- CRUD Architecture
+- DOM Manipulation
+- Local Storage
+- Form Validation
+
+---
+
+# 🇯🇵 日本語
+
+## 📖 プロジェクト概要
+
+Day58で作成した社員管理CRUDアプリをリファクタリングしました。
+
+機能を変更することなく、コード構成・可読性・保守性・拡張性を改善し、より保守しやすいコードへ整理しました。
+
+---
+
+## ✨ 主な機能
+
+- ➕ 社員追加
+- 📋 社員一覧表示
+- ✏️ 社員編集
+- 🗑️ 社員削除
+- 💾 Local Storage保存
+- ✅ 入力バリデーション
+- 🔄 動的レンダリング
+- 🧹 コードリファクタリング
+
+---
+
+## 🛠️ 使用技術
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Local Storage
+
+---
+
+## 📚 リファクタリング内容
+
+- 関数を単一責任（Single Responsibility）ごとに分割
+- Local Storage処理を整理
+- 関数名を改善し可読性を向上
+- Create / Update処理を分離
+- Edit / Deleteイベント処理を整理
+- 重複コード（DRY）の削減
+- 保守性・拡張性の向上
+
+---
+
+## 📖 学習内容
+
+- Code Refactoring
+- Clean Code
+- Single Responsibility Principle
+- DRY Principle
+- Function Extraction
+- Event Binding
+- CRUD設計
+- DOM操作
+- Local Storage
+- バリデーション
+
+---
+
+## 🚀 Future Improvements | 未來可擴充 | 今後追加予定
+
+- 🔍 Employee Search
+- 📊 Sorting
+- 🎯 Filter
+- 📄 Pagination
+- 🌙 Dark Mode
+- 🌐 REST API Integration
+- 🗄️ Database Integration
+- 🔐 Authentication
+
+---
+
+## 📷 Preview
+
+> Replace with your project screenshot.
+
+```text
+preview.png
 ```
 
 ---
 
-## 🇺🇸 English
+## 👨‍💻 Author
 
-### Topic
-Refactor Project
+**Chih-Wen Cheng**
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
-
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
-
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
-
----
-
-## 🇯🇵 日本語
-
-### テーマ
-Refactor Project
-
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
-
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
-
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+GitHub:
+https://github.com/ryouenn
