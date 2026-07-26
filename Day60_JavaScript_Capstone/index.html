@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Personal Expense Tracker</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <p class="eyebrow">Day60 JavaScript Capstone</p>
+        <h1>Personal Expense Tracker</h1>
+        <p class="description">記錄收入與支出，管理個人財務狀況。</p>
+      </header>
+
+      <!-- 收入、支出與餘額統計 -->
+      <section class="summary" aria-label="財務統計">
+        <article class="summary-card income-summary">
+          <h2>總收入</h2>
+          <p id="totalIncome">NT$ 0</p>
+        </article>
+
+        <article class="summary-card expense-summary">
+          <h2>總支出</h2>
+          <p id="totalExpense">NT$ 0</p>
+        </article>
+
+        <article class="summary-card balance-summary">
+          <h2>目前餘額</h2>
+          <p id="balance">NT$ 0</p>
+        </article>
+      </section>
+
+      <!-- 新增與編輯交易的表單區域 -->
+      <section class="form-section">
+        <h2>新增交易紀錄</h2>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="user">使用者</label>
+
+            <input type="text" id="user" placeholder="例如：Tom" autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="title">項目名稱</label>
+
+            <input type="text" id="title" placeholder="例如：午餐" />
+          </div>
+
+          <div class="form-group">
+            <label for="amount">金額</label>
+
+            <input type="number" id="amount" min="0" step="1" placeholder="例如：180" inputmode="decimal" />
+          </div>
+
+          <div class="form-group">
+            <label for="type">類型</label>
+
+            <select id="type">
+              <option value="expense">支出</option>
+              <option value="income">收入</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="category">分類</label>
+
+            <select id="category">
+              <option value="Food">飲食</option>
+              <option value="Transport">交通</option>
+              <option value="Shopping">購物</option>
+              <option value="Learning">學習</option>
+              <option value="Rent">房租</option>
+              <option value="Salary">薪資</option>
+              <option value="Entertainment">娛樂</option>
+              <option value="Medical">醫療</option>
+              <option value="Other">其他</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="date">日期</label>
+
+            <input type="date" id="date" />
+          </div>
+
+          <div class="form-group full-width">
+            <label for="note">備註</label>
+
+            <textarea id="note" rows="4" placeholder="輸入補充說明，也可以留空"></textarea>
+          </div>
+        </div>
+
+        <!-- JavaScript 驗證錯誤會顯示在這裡 -->
+        <p id="errorMessage" class="error-message" role="alert" aria-live="polite"></p>
+
+        <div class="form-actions">
+          <button type="button" id="addBtn">Add Transaction</button>
+
+          <button type="button" id="cancelEditBtn" hidden>Cancel Edit</button>
+        </div>
+      </section>
+
+      <!-- 交易資料列表 -->
+      <section class="transactions-section">
+        <div class="section-heading">
+          <h2>交易紀錄</h2>
+          <p>所有資料會保存在瀏覽器的 Local Storage。</p>
+        </div>
+
+        <div id="transactionList" class="transaction-list" aria-live="polite">
+          <p class="empty-message">目前沒有交易資料。</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./javascript.js" defer></script>
+  </body>
+</html>
