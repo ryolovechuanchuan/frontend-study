@@ -1,0 +1,22 @@
+"use strict";
+const students = ['Tom', 'Mary', 'John'];
+const salaries = [35000, 42000, 58000];
+const expenseCategories = ['Food', 'Traansport', 'Shopping', 'Salary'];
+const user = ['Tom', 30, true];
+const employee = ['Tom', 30000, 'Frontend'];
+const loginResult = [true, 'Login Success'];
+const fruits = ['Apple', 'Banana', 'Orange'];
+const colors = ['Red', 'Blue', 'Green'];
+students.push('David');
+salaries.push(65000);
+fruits.push('Grape');
+user[1] = 31;
+console.log(students);
+console.log(salaries[0]);
+console.log(salaries.length);
+console.log(expenseCategories);
+console.log(user);
+console.log(employee);
+console.log(loginResult);
+console.log(fruits);
+//# sourceMappingURL=script.js.map

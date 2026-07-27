@@ -1,70 +1,331 @@
 # Day62_Array_and_Tuple
 
-## 🇹🇼 中文
+---
 
-### 今日主題
-Array and Tuple
+# 🇹🇼 中文
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+## 📖 專案介紹
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+Day62 學習 TypeScript 中的 **Array（陣列）** 與 **Tuple（元組）**。
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+本日重點在於理解 TypeScript 如何利用型別限制陣列內容，並學習 Tuple（固定長度、固定順序、固定型別）與 Readonly Array（唯讀陣列）的使用方式。
 
-### 建議 Commit
-```bash
-git commit -m "Day62 Array and Tuple"
+---
+
+## 🚀 學習目標
+
+- 學習 Array Type
+- 學習 Tuple
+- 學習 Readonly Array
+- 理解 Array 與 Tuple 的差異
+- 熟悉 TypeScript 型別檢查
+
+---
+
+## 🛠️ 使用技術
+
+- TypeScript
+- JavaScript (Compiled)
+- HTML5
+- VS Code
+
+---
+
+## 📚 學習內容
+
+### Array
+
+```ts
+const students: string[] = ['Tom', 'Mary', 'John'];
+```
+
+- string[]
+- number[]
+- boolean[]
+- Array<T>
+
+---
+
+### Tuple
+
+```ts
+const employee: [string, number, string] = ['Tom', 30000, 'Frontend'];
+```
+
+- 固定長度
+- 固定順序
+- 固定型別
+
+---
+
+### Readonly Array
+
+```ts
+const colors: readonly string[] = ['Red', 'Blue', 'Green'];
+```
+
+- 不可修改
+- 可讀取
+- React 常見寫法
+
+---
+
+## 📂 專案結構
+
+```
+Day62_Array_and_Tuple
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
 ```
 
 ---
 
-## 🇺🇸 English
+## ▶️ 執行方式
 
-### Topic
-Array and Tuple
+編譯
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
+```bash
+tsc
+```
 
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
+自動編譯
 
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+```bash
+tsc --watch
+```
 
 ---
 
-## 🇯🇵 日本語
+## 🎯 學習成果
 
-### テーマ
-Array and Tuple
+- 能使用 Array Type
+- 能建立 Tuple
+- 能使用 Readonly Array
+- 理解 Array 與 Tuple 的差異
+- 能利用 TypeScript 提供型別安全
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+---
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+# 🇺🇸 English
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+## 📖 Project Introduction
+
+Day62 focuses on learning **Array** and **Tuple** in TypeScript.
+
+The project demonstrates how TypeScript enforces array types, introduces Tuple (fixed length, fixed order, fixed types), and explains Readonly Arrays.
+
+---
+
+## 🚀 Learning Objectives
+
+- Learn Array Types
+- Learn Tuple
+- Learn Readonly Array
+- Understand the differences between Array and Tuple
+- Improve type safety with TypeScript
+
+---
+
+## 🛠️ Technologies
+
+- TypeScript
+- JavaScript (Compiled)
+- HTML5
+- VS Code
+
+---
+
+## 📚 Topics
+
+### Array
+
+```ts
+const students: string[] = ['Tom', 'Mary', 'John'];
+```
+
+- string[]
+- number[]
+- boolean[]
+- Array<T>
+
+---
+
+### Tuple
+
+```ts
+const employee: [string, number, string] = ['Tom', 30000, 'Frontend'];
+```
+
+- Fixed length
+- Fixed order
+- Fixed types
+
+---
+
+### Readonly Array
+
+```ts
+const colors: readonly string[] = ['Red', 'Blue', 'Green'];
+```
+
+- Immutable
+- Read-only
+- Commonly used in React
+
+---
+
+## 📂 Project Structure
+
+```
+Day62_Array_and_Tuple
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+## ▶️ Run
+
+Compile
+
+```bash
+tsc
+```
+
+Watch Mode
+
+```bash
+tsc --watch
+```
+
+---
+
+## 🎯 Learning Outcomes
+
+- Use Array Types
+- Create Tuple Types
+- Use Readonly Arrays
+- Understand the differences between Array and Tuple
+- Improve type safety with TypeScript
+
+---
+
+# 🇯🇵 日本語
+
+## 📖 プロジェクト概要
+
+Day62では、TypeScriptの **Array（配列）** と **Tuple（タプル）** を学習しました。
+
+配列の型指定方法、Tuple（固定長・固定順序・固定型）の考え方、Readonly Array の使い方を理解することが目的です。
+
+---
+
+## 🚀 学習目標
+
+- Array Type を学ぶ
+- Tuple を学ぶ
+- Readonly Array を学ぶ
+- Array と Tuple の違いを理解する
+- TypeScript の型安全性を理解する
+
+---
+
+## 🛠️ 使用技術
+
+- TypeScript
+- JavaScript（コンパイル後）
+- HTML5
+- VS Code
+
+---
+
+## 📚 学習内容
+
+### Array
+
+```ts
+const students: string[] = ['Tom', 'Mary', 'John'];
+```
+
+- string[]
+- number[]
+- boolean[]
+- Array<T>
+
+---
+
+### Tuple
+
+```ts
+const employee: [string, number, string] = ['Tom', 30000, 'Frontend'];
+```
+
+- 固定長
+- 固定順序
+- 固定型
+
+---
+
+### Readonly Array
+
+```ts
+const colors: readonly string[] = ['Red', 'Blue', 'Green'];
+```
+
+- 読み取り専用
+- 変更不可
+- Reactでよく利用される
+
+---
+
+## 📂 ディレクトリ構成
+
+```
+Day62_Array_and_Tuple
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+## ▶️ 実行方法
+
+コンパイル
+
+```bash
+tsc
+```
+
+監視モード
+
+```bash
+tsc --watch
+```
+
+---
+
+## 🎯 学習成果
+
+- Array Type を利用できる
+- Tuple を作成できる
+- Readonly Array を利用できる
+- Array と Tuple の違いを理解できる
+- TypeScript の型安全性を活用できる
