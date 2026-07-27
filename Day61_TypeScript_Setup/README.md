@@ -1,70 +1,261 @@
 # Day61_TypeScript_Setup
 
-## 🇹🇼 中文
+## 中文
 
-### 今日主題
-TypeScript Setup
+### 📖 專案介紹
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+Day61 開始學習 TypeScript。
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+本日重點為建立 TypeScript 開發環境，了解 TypeScript 的編譯流程，並學習基本型別（Primitive Types）與 Type Inference（型別推論）。
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+---
 
-### 建議 Commit
-```bash
-git commit -m "Day61 TypeScript Setup"
+### 🚀 學習目標
+
+- 建立 TypeScript 開發環境
+- 安裝 TypeScript Compiler（tsc）
+- 建立 tsconfig.json
+- 了解 TypeScript 編譯流程
+- 學習 Primitive Types
+- 學習 Type Inference
+- 成功將 `.ts` 編譯成 `.js`
+
+---
+
+### 🛠️ 使用技術
+
+- HTML5
+- TypeScript
+- JavaScript (Compiled)
+- VS Code
+
+---
+
+### 📚 學習內容
+
+- TypeScript Introduction
+- TypeScript Compiler
+- tsconfig.json
+- string
+- number
+- boolean
+- null
+- undefined
+- any
+- unknown
+- Type Annotation
+- Type Inference
+
+---
+
+### 📂 專案結構
+
+```
+Day61_TypeScript_Setup
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+└── dist
+    ├── script.js
+    └── script.js.map
 ```
 
 ---
 
-## 🇺🇸 English
+### ▶️ 執行方式
 
-### Topic
-TypeScript Setup
+```bash
+tsc
+```
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
+或自動編譯
 
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
-
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+```bash
+tsc --watch
+```
 
 ---
 
-## 🇯🇵 日本語
+### 🎯 學習成果
 
-### テーマ
-TypeScript Setup
+- 能建立 TypeScript 專案
+- 能完成 TypeScript 編譯
+- 能理解 JavaScript 與 TypeScript 的差異
+- 能使用基本型別與型別推論
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+---
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+## English
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+### 📖 Project Introduction
+
+Day61 marks the beginning of learning TypeScript.
+
+This project focuses on setting up the TypeScript development environment, understanding the compilation workflow, and learning Primitive Types and Type Inference.
+
+---
+
+### 🚀 Learning Objectives
+
+- Set up a TypeScript project
+- Install the TypeScript Compiler (tsc)
+- Configure tsconfig.json
+- Understand the TypeScript compilation process
+- Learn Primitive Types
+- Learn Type Inference
+- Compile `.ts` files into JavaScript
+
+---
+
+### 🛠️ Technologies
+
+- HTML5
+- TypeScript
+- JavaScript (Compiled)
+- VS Code
+
+---
+
+### 📚 Topics
+
+- TypeScript Introduction
+- TypeScript Compiler
+- tsconfig.json
+- string
+- number
+- boolean
+- null
+- undefined
+- any
+- unknown
+- Type Annotation
+- Type Inference
+
+---
+
+### 📂 Project Structure
+
+```
+Day61_TypeScript_Setup
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+### ▶️ Run
+
+Compile TypeScript:
+
+```bash
+tsc
+```
+
+Watch Mode:
+
+```bash
+tsc --watch
+```
+
+---
+
+### 🎯 Learning Outcomes
+
+- Build a TypeScript environment
+- Compile TypeScript successfully
+- Understand the differences between JavaScript and TypeScript
+- Use primitive types and type inference correctly
+
+---
+
+## 日本語
+
+### 📖 プロジェクト概要
+
+Day61では、TypeScriptの学習を開始しました。
+
+TypeScriptの開発環境を構築し、コンパイルの流れを理解するとともに、基本型（Primitive Types）と型推論（Type Inference）を学習します。
+
+---
+
+### 🚀 学習目標
+
+- TypeScript開発環境の構築
+- TypeScript Compiler（tsc）の導入
+- tsconfig.json の作成
+- TypeScriptのコンパイル手順を理解する
+- Primitive Types を学ぶ
+- Type Inference を学ぶ
+- `.ts` を `.js` にコンパイルできるようになる
+
+---
+
+### 🛠️ 使用技術
+
+- HTML5
+- TypeScript
+- JavaScript（コンパイル後）
+- VS Code
+
+---
+
+### 📚 学習内容
+
+- TypeScript 入門
+- TypeScript Compiler
+- tsconfig.json
+- string
+- number
+- boolean
+- null
+- undefined
+- any
+- unknown
+- 型アノテーション
+- 型推論（Type Inference）
+
+---
+
+### 📂 ディレクトリ構成
+
+```
+Day61_TypeScript_Setup
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+### ▶️ 実行方法
+
+コンパイル
+
+```bash
+tsc
+```
+
+監視モード
+
+```bash
+tsc --watch
+```
+
+---
+
+### 🎯 学習成果
+
+- TypeScript環境を構築できる
+- TypeScriptをコンパイルできる
+- JavaScriptとの違いを理解できる
+- 基本型と型推論を利用できる
