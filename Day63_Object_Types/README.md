@@ -1,70 +1,415 @@
 # Day63_Object_Types
 
-## 🇹🇼 中文
+---
 
-### 今日主題
-Object Types
+# 🇹🇼 中文
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+## 📖 專案介紹
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+Day63 學習 TypeScript 的 **Object Types（物件型別）**。
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+本日重點為了解如何替物件建立型別，學習 Optional Property（可選屬性）、Readonly Property（唯讀屬性）、Nested Object（巢狀物件）以及 Object Array（物件陣列）的使用方式。
 
-### 建議 Commit
-```bash
-git commit -m "Day63 Object Types"
+---
+
+## 🚀 學習目標
+
+- 學習 Object Type
+- 學習 Optional Property（?）
+- 學習 Readonly Property
+- 學習 Nested Object
+- 學習 Object Array
+- 理解 TypeScript 如何限制物件型別
+
+---
+
+## 🛠️ 使用技術
+
+- TypeScript
+- JavaScript (Compiled)
+- HTML5
+- VS Code
+
+---
+
+## 📚 學習內容
+
+### Object Type
+
+```ts
+const employee: {
+  name: string;
+  age: number;
+  isWorking: boolean;
+} = {
+  name: 'Tom',
+  age: 30,
+  isWorking: true,
+};
 ```
 
 ---
 
-## 🇺🇸 English
+### Optional Property
 
-### Topic
-Object Types
+```ts
+const user: {
+  name: string;
+  email?: string;
+} = {
+  name: 'Tom',
+};
+```
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
-
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
-
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+- 使用 `?`
+- 屬性可存在也可不存在
 
 ---
 
-## 🇯🇵 日本語
+### Readonly Property
 
-### テーマ
-Object Types
+```ts
+const user: {
+  readonly id: number;
+  name: string;
+} = {
+  id: 1,
+  name: 'Tom',
+};
+```
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+- 建立後不可修改
+- 常用於 ID、建立時間等固定資料
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+---
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+### Nested Object
+
+```ts
+const company: {
+  name: string;
+  address: {
+    city: string;
+    country: string;
+  };
+} = {
+  name: 'OpenAI',
+  address: {
+    city: 'San Francisco',
+    country: 'USA',
+  },
+};
+```
+
+---
+
+### Object Array
+
+```ts
+const employees: {
+  name: string;
+  salary: number;
+}[] = [
+  {
+    name: 'Tom',
+    salary: 35000,
+  },
+  {
+    name: 'Mary',
+    salary: 42000,
+  },
+];
+```
+
+---
+
+## 📂 專案結構
+
+```
+Day63_Object_Types
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+## ▶️ 執行方式
+
+編譯
+
+```bash
+tsc
+```
+
+自動編譯
+
+```bash
+tsc --watch
+```
+
+---
+
+## 🎯 學習成果
+
+- 能建立 Object Type
+- 能使用 Optional Property
+- 能使用 Readonly Property
+- 能建立 Nested Object
+- 能建立 Object Array
+- 能利用 TypeScript 提供完整型別檢查
+
+---
+
+# 🇺🇸 English
+
+## 📖 Project Introduction
+
+Day63 focuses on **Object Types** in TypeScript.
+
+This project demonstrates how to define object types, use Optional Properties, Readonly Properties, Nested Objects, and Arrays of Objects.
+
+---
+
+## 🚀 Learning Objectives
+
+- Learn Object Types
+- Learn Optional Properties
+- Learn Readonly Properties
+- Learn Nested Objects
+- Learn Arrays of Objects
+- Improve object type safety
+
+---
+
+## 🛠️ Technologies
+
+- TypeScript
+- JavaScript (Compiled)
+- HTML5
+- VS Code
+
+---
+
+## 📚 Topics
+
+### Object Type
+
+```ts
+const employee: {
+  name: string;
+  age: number;
+  isWorking: boolean;
+};
+```
+
+---
+
+### Optional Property
+
+```ts
+email?: string
+```
+
+---
+
+### Readonly Property
+
+```ts
+readonly id: number
+```
+
+---
+
+### Nested Object
+
+```ts
+address: {
+  city: string;
+  country: string;
+}
+```
+
+---
+
+### Object Array
+
+```ts
+const employees: {
+  name: string;
+  salary: number;
+}[] = [];
+```
+
+---
+
+## 📂 Project Structure
+
+```
+Day63_Object_Types
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+## ▶️ Run
+
+Compile
+
+```bash
+tsc
+```
+
+Watch Mode
+
+```bash
+tsc --watch
+```
+
+---
+
+## 🎯 Learning Outcomes
+
+- Define Object Types
+- Use Optional Properties
+- Use Readonly Properties
+- Create Nested Objects
+- Create Arrays of Objects
+- Improve object type safety with TypeScript
+
+---
+
+# 🇯🇵 日本語
+
+## 📖 プロジェクト概要
+
+Day63では、TypeScriptの **Object Types（オブジェクト型）** を学習しました。
+
+オブジェクトの型定義、Optional Property（オプショナルプロパティ）、Readonly Property（読み取り専用プロパティ）、Nested Object（ネストしたオブジェクト）、Object Array（オブジェクト配列）の使い方を学びます。
+
+---
+
+## 🚀 学習目標
+
+- Object Type を学ぶ
+- Optional Property を学ぶ
+- Readonly Property を学ぶ
+- Nested Object を学ぶ
+- Object Array を学ぶ
+- TypeScript の型安全性を理解する
+
+---
+
+## 🛠️ 使用技術
+
+- TypeScript
+- JavaScript（コンパイル後）
+- HTML5
+- VS Code
+
+---
+
+## 📚 学習内容
+
+### Object Type
+
+```ts
+const employee: {
+  name: string;
+  age: number;
+  isWorking: boolean;
+};
+```
+
+---
+
+### Optional Property
+
+```ts
+email?: string
+```
+
+---
+
+### Readonly Property
+
+```ts
+readonly id: number
+```
+
+---
+
+### Nested Object
+
+```ts
+address: {
+  city: string;
+  country: string;
+}
+```
+
+---
+
+### Object Array
+
+```ts
+const employees: {
+  name: string;
+  salary: number;
+}[] = [];
+```
+
+---
+
+## 📂 ディレクトリ構成
+
+```
+Day63_Object_Types
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+## ▶️ 実行方法
+
+コンパイル
+
+```bash
+tsc
+```
+
+監視モード
+
+```bash
+tsc --watch
+```
+
+---
+
+## 🎯 学習成果
+
+- Object Type を定義できる
+- Optional Property を利用できる
+- Readonly Property を利用できる
+- Nested Object を作成できる
+- Object Array を利用できる
+- TypeScript の型安全性を理解できる

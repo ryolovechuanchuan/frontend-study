@@ -1,70 +1,373 @@
 # Day64_Type_Alias
 
-## 🇹🇼 中文
+---
 
-### 今日主題
-Type Alias
+# 🇹🇼 中文
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+## 📖 專案介紹
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+Day64 學習 TypeScript 的 **Type Alias（型別別名）**。
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+本日重點在於利用 Type Alias 提高程式碼的可讀性與重用性，並學習如何搭配陣列、Union Type（聯集型別）以及 Intersection Type（交集型別）建立更完整的型別設計。
 
-### 建議 Commit
-```bash
-git commit -m "Day64 Type Alias"
+---
+
+## 🚀 學習目標
+
+- 學習 Type Alias
+- 學習 Type Alias + Array
+- 學習 Union Type（`|`）
+- 學習 Intersection Type（`&`）
+- 提升 TypeScript 型別設計能力
+
+---
+
+## 🛠️ 使用技術
+
+- TypeScript
+- JavaScript (Compiled)
+- HTML5
+- VS Code
+
+---
+
+## 📚 學習內容
+
+### Type Alias
+
+```ts
+type Employee = {
+  name: string;
+  age: number;
+  salary: number;
+};
+```
+
+建立型別別名，避免重複撰寫相同的 Object Type。
+
+---
+
+### Type Alias + Array
+
+```ts
+type Employee = {
+  name: string;
+  age: number;
+  salary: number;
+};
+
+const employees: Employee[] = [];
+```
+
+建立物件陣列，提升程式可讀性。
+
+---
+
+### Union Type
+
+```ts
+let employeeId: number | string;
+
+employeeId = 1001;
+employeeId = 'EMP001';
+```
+
+一個變數可以接受多種型別。
+
+---
+
+### Intersection Type
+
+```ts
+type Employee = {
+  name: string;
+  age: number;
+};
+
+type Salary = {
+  salary: number;
+};
+
+type Contact = {
+  email: string;
+};
+
+type EmployeeDetail = Employee & Salary & Contact;
+```
+
+將多個 Type 合併成新的型別。
+
+---
+
+## 📂 專案結構
+
+```
+Day64_Type_Alias
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
 ```
 
 ---
 
-## 🇺🇸 English
+## ▶️ 執行方式
 
-### Topic
-Type Alias
+編譯
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
+```bash
+tsc
+```
 
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
+自動編譯
 
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+```bash
+tsc --watch
+```
 
 ---
 
-## 🇯🇵 日本語
+## 🎯 學習成果
 
-### テーマ
-Type Alias
+- 能建立 Type Alias
+- 能使用 Type Alias 建立 Array
+- 能使用 Union Type
+- 能使用 Intersection Type
+- 能提升 TypeScript 型別重用性
+- 能建立更乾淨且易維護的程式碼
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+---
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+# 🇺🇸 English
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+## 📖 Project Introduction
+
+Day64 focuses on **Type Alias** in TypeScript.
+
+This project demonstrates how to improve code readability and reusability using Type Aliases, Arrays of custom types, Union Types, and Intersection Types.
+
+---
+
+## 🚀 Learning Objectives
+
+- Learn Type Alias
+- Learn Type Alias with Arrays
+- Learn Union Types (`|`)
+- Learn Intersection Types (`&`)
+- Improve TypeScript type design
+
+---
+
+## 🛠️ Technologies
+
+- TypeScript
+- JavaScript (Compiled)
+- HTML5
+- VS Code
+
+---
+
+## 📚 Topics
+
+### Type Alias
+
+```ts
+type Employee = {
+  name: string;
+  age: number;
+  salary: number;
+};
+```
+
+---
+
+### Type Alias + Array
+
+```ts
+const employees: Employee[] = [];
+```
+
+---
+
+### Union Type
+
+```ts
+let employeeId: number | string;
+```
+
+Allows multiple possible types.
+
+---
+
+### Intersection Type
+
+```ts
+type EmployeeDetail = Employee & Salary & Contact;
+```
+
+Combines multiple types into one.
+
+---
+
+## 📂 Project Structure
+
+```
+Day64_Type_Alias
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+## ▶️ Run
+
+Compile
+
+```bash
+tsc
+```
+
+Watch Mode
+
+```bash
+tsc --watch
+```
+
+---
+
+## 🎯 Learning Outcomes
+
+- Create Type Aliases
+- Build Arrays using custom types
+- Use Union Types
+- Use Intersection Types
+- Improve code readability
+- Reuse types efficiently
+
+---
+
+# 🇯🇵 日本語
+
+## 📖 プロジェクト概要
+
+Day64では、TypeScript の **Type Alias（型エイリアス）** を学習しました。
+
+Type Alias を利用して型を再利用する方法や、Array、Union Type、Intersection Type と組み合わせた実践的な型設計を学びます。
+
+---
+
+## 🚀 学習目標
+
+- Type Alias を学ぶ
+- Type Alias と配列を学ぶ
+- Union Type（`|`）を学ぶ
+- Intersection Type（`&`）を学ぶ
+- 型の再利用方法を理解する
+
+---
+
+## 🛠️ 使用技術
+
+- TypeScript
+- JavaScript（コンパイル後）
+- HTML5
+- VS Code
+
+---
+
+## 📚 学習内容
+
+### Type Alias
+
+```ts
+type Employee = {
+  name: string;
+  age: number;
+  salary: number;
+};
+```
+
+型エイリアスを作成し、同じ型定義を再利用します。
+
+---
+
+### Type Alias + Array
+
+```ts
+const employees: Employee[] = [];
+```
+
+オブジェクト配列を簡潔に定義します。
+
+---
+
+### Union Type
+
+```ts
+let employeeId: number | string;
+```
+
+複数の型を許可します。
+
+---
+
+### Intersection Type
+
+```ts
+type EmployeeDetail = Employee & Salary & Contact;
+```
+
+複数の型を結合して新しい型を作成します。
+
+---
+
+## 📂 ディレクトリ構成
+
+```
+Day64_Type_Alias
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+## ▶️ 実行方法
+
+コンパイル
+
+```bash
+tsc
+```
+
+監視モード
+
+```bash
+tsc --watch
+```
+
+---
+
+## 🎯 学習成果
+
+- Type Alias を作成できる
+- Type Alias を利用した配列を作成できる
+- Union Type を利用できる
+- Intersection Type を利用できる
+- 型を効率よく再利用できる
+- 保守性の高いコードを書ける
