@@ -1,70 +1,449 @@
 # Day66_Union_and_Narrowing
 
-## 🇹🇼 中文
+---
 
-### 今日主題
-Union and Narrowing
+# 🇹🇼 中文
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+## 📖 專案介紹
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+Day66 學習 TypeScript 的 **Union Type（聯集型別）** 與 **Type Narrowing（型別縮小）**。
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+本日重點在於理解如何讓一個變數擁有多種型別，以及如何透過 `typeof`、`if / else`、`in` Operator 等方式縮小型別範圍，安全地存取不同型別的屬性與方法。
 
-### 建議 Commit
-```bash
-git commit -m "Day66 Union and Narrowing"
+---
+
+## 🚀 學習目標
+
+- 學習 Union Type
+- 學習 Type Narrowing
+- 學習 `typeof` Narrowing
+- 學習 `if / else` Narrowing
+- 學習 `in` Operator
+- 學習 API Response 型別設計
+
+---
+
+## 🛠️ 使用技術
+
+- TypeScript
+- JavaScript (Compiled)
+- HTML5
+- VS Code
+
+---
+
+## 📚 學習內容
+
+### Union Type
+
+```ts
+let employeeId: number | string;
+
+employeeId = 1001;
+employeeId = 'EMP001';
+```
+
+一個變數可以接受多種型別。
+
+---
+
+### typeof Narrowing
+
+```ts
+let value: string | number;
+
+value = 'TypeScript';
+
+if (typeof value === 'string') {
+  console.log(value.toUpperCase());
+}
+```
+
+透過 `typeof` 判斷基本型別。
+
+---
+
+### if / else Narrowing
+
+```ts
+let value: string | number;
+
+value = Math.random() > 0.5 ? 'Hello' : 100;
+
+if (typeof value === 'string') {
+  console.log(value.toUpperCase());
+} else {
+  console.log(value.toFixed(2));
+}
+```
+
+TypeScript 會自動推斷不同分支的型別。
+
+---
+
+### in Operator
+
+```ts
+interface Employee {
+  name: string;
+  salary: number;
+}
+
+interface Student {
+  name: string;
+  grade: number;
+}
+
+let person: Employee | Student;
+
+if ('salary' in person) {
+  console.log(person.salary);
+}
+```
+
+利用物件屬性縮小型別。
+
+---
+
+### API Response（Discriminated Union）
+
+```ts
+interface SuccessResponse {
+  success: true;
+  data: string;
+}
+
+interface ErrorResponse {
+  success: false;
+  error: string;
+}
+
+type ApiResponse = SuccessResponse | ErrorResponse;
+```
+
+建立不同 API 回傳結果的型別。
+
+---
+
+## 📂 專案結構
+
+```
+Day66_Union_and_Narrowing
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
 ```
 
 ---
 
-## 🇺🇸 English
+## ▶️ 執行方式
 
-### Topic
-Union and Narrowing
+編譯
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
+```bash
+tsc
+```
 
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
+自動編譯
 
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+```bash
+tsc --watch
+```
 
 ---
 
-## 🇯🇵 日本語
+## 🎯 學習成果
 
-### テーマ
-Union and Narrowing
+- 能建立 Union Type
+- 能使用 `typeof` 進行型別縮小
+- 能使用 `if / else` 進行型別判斷
+- 能使用 `in` Operator 判斷物件型別
+- 能建立 API Response 型別
+- 能理解 Type Narrowing 在實務上的應用
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+---
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+# 🇺🇸 English
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+## 📖 Project Introduction
+
+Day66 focuses on **Union Types** and **Type Narrowing** in TypeScript.
+
+This project demonstrates how to define variables with multiple possible types and safely narrow them using `typeof`, `if / else`, and the `in` operator.
+
+---
+
+## 🚀 Learning Objectives
+
+- Learn Union Types
+- Learn Type Narrowing
+- Learn `typeof` Narrowing
+- Learn `if / else` Narrowing
+- Learn the `in` Operator
+- Learn API Response type design
+
+---
+
+## 🛠️ Technologies
+
+- TypeScript
+- JavaScript (Compiled)
+- HTML5
+- VS Code
+
+---
+
+## 📚 Topics
+
+### Union Type
+
+```ts
+let employeeId: number | string;
+```
+
+Allows multiple possible types.
+
+---
+
+### typeof Narrowing
+
+```ts
+if (typeof value === 'string') {
+  console.log(value.toUpperCase());
+}
+```
+
+Narrows primitive types.
+
+---
+
+### if / else Narrowing
+
+```ts
+if (typeof value === 'string') {
+} else {
+}
+```
+
+TypeScript automatically narrows each branch.
+
+---
+
+### in Operator
+
+```ts
+if ('salary' in person) {
+  console.log(person.salary);
+}
+```
+
+Narrows object types based on property existence.
+
+---
+
+### API Response (Discriminated Union)
+
+```ts
+interface SuccessResponse {
+  success: true;
+  data: string;
+}
+
+interface ErrorResponse {
+  success: false;
+  error: string;
+}
+
+type ApiResponse = SuccessResponse | ErrorResponse;
+```
+
+Models different API response types safely.
+
+---
+
+## 📂 Project Structure
+
+```
+Day66_Union_and_Narrowing
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+## ▶️ Run
+
+Compile
+
+```bash
+tsc
+```
+
+Watch Mode
+
+```bash
+tsc --watch
+```
+
+---
+
+## 🎯 Learning Outcomes
+
+- Create Union Types
+- Narrow types using `typeof`
+- Narrow types using `if / else`
+- Narrow object types using the `in` operator
+- Design API response types
+- Understand practical Type Narrowing
+
+---
+
+# 🇯🇵 日本語
+
+## 📖 プロジェクト概要
+
+Day66では、TypeScript の **Union Type（ユニオン型）** と **Type Narrowing（型の絞り込み）** を学習しました。
+
+`typeof`、`if / else`、`in` 演算子を利用して、安全に型を判定・絞り込む方法を学びます。また、API レスポンスの型設計についても理解します。
+
+---
+
+## 🚀 学習目標
+
+- Union Type を学ぶ
+- Type Narrowing を学ぶ
+- `typeof` による型の絞り込みを学ぶ
+- `if / else` による型の絞り込みを学ぶ
+- `in` 演算子を学ぶ
+- API レスポンスの型設計を学ぶ
+
+---
+
+## 🛠️ 使用技術
+
+- TypeScript
+- JavaScript（コンパイル後）
+- HTML5
+- VS Code
+
+---
+
+## 📚 学習内容
+
+### Union Type
+
+```ts
+let employeeId: number | string;
+```
+
+複数の型を許可します。
+
+---
+
+### typeof Narrowing
+
+```ts
+if (typeof value === 'string') {
+  console.log(value.toUpperCase());
+}
+```
+
+基本型を判定します。
+
+---
+
+### if / else Narrowing
+
+```ts
+if (typeof value === 'string') {
+} else {
+}
+```
+
+各分岐で型が自動的に絞り込まれます。
+
+---
+
+### in Operator
+
+```ts
+if ('salary' in person) {
+  console.log(person.salary);
+}
+```
+
+プロパティの存在によってオブジェクト型を判定します。
+
+---
+
+### API Response（Discriminated Union）
+
+```ts
+interface SuccessResponse {
+  success: true;
+  data: string;
+}
+
+interface ErrorResponse {
+  success: false;
+  error: string;
+}
+
+type ApiResponse = SuccessResponse | ErrorResponse;
+```
+
+API の成功・失敗レスポンスを安全に表現します。
+
+---
+
+## 📂 ディレクトリ構成
+
+```
+Day66_Union_and_Narrowing
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+## ▶️ 実行方法
+
+コンパイル
+
+```bash
+tsc
+```
+
+監視モード
+
+```bash
+tsc --watch
+```
+
+---
+
+## 🎯 学習成果
+
+- Union Type を利用できる
+- `typeof` による型の絞り込みができる
+- `if / else` による型判定ができる
+- `in` 演算子でオブジェクト型を判定できる
+- API レスポンスの型設計ができる
+- Type Narrowing の実践的な使い方を理解できる
