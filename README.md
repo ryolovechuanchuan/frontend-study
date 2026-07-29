@@ -99,7 +99,46 @@ I am currently transitioning from the banking industry to become a Frontend Engi
 | Day27 | Array Methods (forEach / map / filter) | 配列メソッド（forEach・map・filter） | ✅     |
 | Day28 | Destructuring & Spread Operator        | 分割代入・スプレッド構文             | ✅     |
 | Day29 | Promise                                | Promise                              | ✅     |
-| Day30 | Async / Await & Fetch API              | Async/Await・Fetch API               | ⏳     |
+| Day31 | date-object                            | Async/Await・Fetch API               | ✅     |
+| Day32 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day33 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day34 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day35 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day36 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day37 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day38 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day39 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day40 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day41 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day42 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day43 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day44 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day45 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day46 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day47 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day48 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day49 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day50 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day51 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day52 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day53 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day54 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day55 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day56 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day57 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day58 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day59 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day60 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day61 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day62 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day63 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day64 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day65 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day66 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day67 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day68 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day69 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
+| Day70 | Async / Await & Fetch API              | Async/Await・Fetch API               | ✅     |
 
 ---
 
