@@ -1,70 +1,462 @@
 # Day68_Generics
 
-## 🇹🇼 中文
+---
 
-### 今日主題
-Generics
+# 🇹🇼 中文
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+## 📖 專案介紹
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+Day68 學習 TypeScript 的 **Generics（泛型）**。
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+本日重點在於理解泛型的概念，以及如何透過 Generic Function、Generic Interface、Generic Type Alias 與 Generic Constraints 建立具有彈性且型別安全的程式碼，提高程式的重用性與可維護性。
 
-### 建議 Commit
-```bash
-git commit -m "Day68 Generics"
+---
+
+## 🚀 學習目標
+
+- 學習為什麼需要 Generics
+- 學習 Generic Function
+- 學習 Generic Array
+- 學習 Generic Interface
+- 學習 Generic Type Alias
+- 學習 Generic Constraints (`extends`)
+
+---
+
+## 🛠️ 使用技術
+
+- TypeScript
+- JavaScript (Compiled)
+- HTML5
+- VS Code
+
+---
+
+## 📚 學習內容
+
+### Why Generics?
+
+```ts
+function echo<T>(value: T): T {
+  return value;
+}
+```
+
+泛型可以接受不同型別，同時保留型別資訊，避免使用 `any` 而失去型別檢查。
+
+---
+
+### Generic Function
+
+```ts
+function identity<T>(value: T): T {
+  return value;
+}
+
+console.log(identity('Tom'));
+console.log(identity(30));
+console.log(identity(true));
+```
+
+建立可重複使用且保有型別安全的函式。
+
+---
+
+### Generic Array
+
+```ts
+let products: Array<string> = ['Laptop', 'Keyboard', 'Mouse'];
+```
+
+使用 `Array<T>` 表示泛型陣列。
+
+---
+
+### Generic Interface
+
+```ts
+interface Box<T> {
+  value: T;
+}
+
+const numberBox: Box<number> = {
+  value: 100,
+};
+
+const stringBox: Box<string> = {
+  value: 'Hello',
+};
+```
+
+建立可以套用不同型別的 Interface。
+
+---
+
+### Generic Type Alias
+
+```ts
+type Result<T> = {
+  success: boolean;
+  data: T;
+};
+
+const userResult: Result<string> = {
+  success: true,
+  data: 'Mary',
+};
+```
+
+建立具有彈性的資料模型。
+
+---
+
+### Generic Constraints
+
+```ts
+function printLength<T extends { length: number }>(value: T): void {
+  console.log(value.length);
+}
+```
+
+使用 `extends` 限制泛型必須符合指定條件。
+
+---
+
+## 📂 專案結構
+
+```
+Day68_Generics
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
 ```
 
 ---
 
-## 🇺🇸 English
+## ▶️ 執行方式
 
-### Topic
-Generics
+編譯
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
+```bash
+tsc
+```
 
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
+監聽模式
 
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+```bash
+tsc --watch
+```
 
 ---
 
-## 🇯🇵 日本語
+## 🎯 學習成果
 
-### テーマ
-Generics
+- 理解 Generics 的用途
+- 能建立 Generic Function
+- 能使用 Generic Array
+- 能建立 Generic Interface
+- 能建立 Generic Type Alias
+- 能使用 Generic Constraints (`extends`)
+- 理解 TypeScript 型別推斷（Type Inference）
+- 能閱讀常見 React、Axios 泛型寫法
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+---
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+# 🇺🇸 English
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+## 📖 Project Introduction
+
+Day68 focuses on **Generics** in TypeScript.
+
+This project introduces generic programming concepts, including Generic Functions, Generic Arrays, Generic Interfaces, Generic Type Aliases, and Generic Constraints to create reusable, flexible, and type-safe code.
+
+---
+
+## 🚀 Learning Objectives
+
+- Understand why Generics are needed
+- Learn Generic Functions
+- Learn Generic Arrays
+- Learn Generic Interfaces
+- Learn Generic Type Aliases
+- Learn Generic Constraints (`extends`)
+
+---
+
+## 🛠️ Technologies
+
+- TypeScript
+- JavaScript (Compiled)
+- HTML5
+- VS Code
+
+---
+
+## 📚 Topics
+
+### Why Generics?
+
+```ts
+function echo<T>(value: T): T {
+  return value;
+}
+```
+
+Generics preserve type information while allowing multiple data types.
+
+---
+
+### Generic Function
+
+```ts
+function identity<T>(value: T): T {
+  return value;
+}
+```
+
+Create reusable and type-safe functions.
+
+---
+
+### Generic Array
+
+```ts
+let products: Array<string> = ['Laptop', 'Keyboard', 'Mouse'];
+```
+
+Use `Array<T>` to represent generic arrays.
+
+---
+
+### Generic Interface
+
+```ts
+interface Box<T> {
+  value: T;
+}
+```
+
+Create reusable interfaces for different data types.
+
+---
+
+### Generic Type Alias
+
+```ts
+type Result<T> = {
+  success: boolean;
+  data: T;
+};
+```
+
+Create flexible reusable data structures.
+
+---
+
+### Generic Constraints
+
+```ts
+function printLength<T extends { length: number }>(value: T): void {
+  console.log(value.length);
+}
+```
+
+Restrict generic types using `extends`.
+
+---
+
+## 📂 Project Structure
+
+```
+Day68_Generics
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+## ▶️ Run
+
+Compile
+
+```bash
+tsc
+```
+
+Watch Mode
+
+```bash
+tsc --watch
+```
+
+---
+
+## 🎯 Learning Outcomes
+
+- Understand the purpose of Generics
+- Create Generic Functions
+- Use Generic Arrays
+- Create Generic Interfaces
+- Create Generic Type Aliases
+- Apply Generic Constraints (`extends`)
+- Understand Type Inference
+- Read generic syntax used in React and Axios
+
+---
+
+# 🇯🇵 日本語
+
+## 📖 プロジェクト概要
+
+Day68では、TypeScript の **Generics（ジェネリクス）** を学習しました。
+
+Generic Function、Generic Interface、Generic Type Alias、Generic Constraints を通して、柔軟で再利用しやすく、型安全なコードを書く方法を学びます。
+
+---
+
+## 🚀 学習目標
+
+- Generics が必要な理由を理解する
+- Generic Function を学ぶ
+- Generic Array を学ぶ
+- Generic Interface を学ぶ
+- Generic Type Alias を学ぶ
+- Generic Constraints（`extends`）を学ぶ
+
+---
+
+## 🛠️ 使用技術
+
+- TypeScript
+- JavaScript（コンパイル後）
+- HTML5
+- VS Code
+
+---
+
+## 📚 学習内容
+
+### Why Generics?
+
+```ts
+function echo<T>(value: T): T {
+  return value;
+}
+```
+
+さまざまな型を扱いながら、型情報を保持できます。
+
+---
+
+### Generic Function
+
+```ts
+function identity<T>(value: T): T {
+  return value;
+}
+```
+
+型安全で再利用可能な関数を作成します。
+
+---
+
+### Generic Array
+
+```ts
+let products: Array<string> = ['Laptop', 'Keyboard', 'Mouse'];
+```
+
+`Array<T>` を利用してジェネリック配列を表現します。
+
+---
+
+### Generic Interface
+
+```ts
+interface Box<T> {
+  value: T;
+}
+```
+
+さまざまな型に対応できる Interface を作成します。
+
+---
+
+### Generic Type Alias
+
+```ts
+type Result<T> = {
+  success: boolean;
+  data: T;
+};
+```
+
+再利用可能なデータ構造を定義します。
+
+---
+
+### Generic Constraints
+
+```ts
+function printLength<T extends { length: number }>(value: T): void {
+  console.log(value.length);
+}
+```
+
+`extends` を利用してジェネリクスの条件を制限します。
+
+---
+
+## 📂 ディレクトリ構成
+
+```
+Day68_Generics
+│
+├── index.html
+├── script.ts
+├── tsconfig.json
+├── README.md
+└── dist
+    ├── script.js
+    └── script.js.map
+```
+
+---
+
+## ▶️ 実行方法
+
+コンパイル
+
+```bash
+tsc
+```
+
+監視モード
+
+```bash
+tsc --watch
+```
+
+---
+
+## 🎯 学習成果
+
+- Generics の目的を理解できる
+- Generic Function を作成できる
+- Generic Array を利用できる
+- Generic Interface を作成できる
+- Generic Type Alias を作成できる
+- Generic Constraints（`extends`）を利用できる
+- Type Inference を理解できる
+- React や Axios のジェネリクス構文を理解できる
