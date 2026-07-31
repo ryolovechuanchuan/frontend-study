@@ -1,70 +1,242 @@
-# Day72_LocalStorage_Types
-
-## 🇹🇼 中文
-
-### 今日主題
-LocalStorage Types
-
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
-
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
-
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
-
-### 建議 Commit
-```bash
-git commit -m "Day72 LocalStorage Types"
-```
+# Day72 - LocalStorage Types
 
 ---
 
-## 🇺🇸 English
+# 🇹🇼 中文
 
-### Topic
-LocalStorage Types
+## 📖 專案介紹
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
+Day72 主要學習如何在 TypeScript 中使用 **LocalStorage** 儲存、讀取與管理資料，並透過 DOM 將資料顯示在網頁上。
 
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
-
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+本次練習涵蓋使用者資訊(User)與購物車(Cart)兩個案例，了解 Object 與 Array 在 LocalStorage 中的儲存方式，以及 JSON 資料轉換流程。
 
 ---
 
-## 🇯🇵 日本語
+## 📚 學習重點
 
-### テーマ
-LocalStorage Types
+- localStorage.setItem()
+- localStorage.getItem()
+- JSON.stringify()
+- JSON.parse()
+- Object 與 Array
+- string | null
+- Type Narrowing
+- Null Check
+- DOM 操作
+- textContent
+- innerHTML
+- Array.forEach()
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+---
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+## 🛠 使用技術
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+- HTML5
+- TypeScript
+- LocalStorage API
+
+---
+
+## ✨ 功能
+
+### 👤 使用者資訊
+
+- 將 User Object 存入 LocalStorage
+- 讀取 LocalStorage
+- JSON 轉換
+- 顯示使用者資訊
+
+### 🛒 購物車
+
+- 儲存購物車陣列
+- 讀取購物車資料
+- JSON 解析
+- 使用 forEach() 顯示商品
+
+---
+
+## 🎯 學習成果
+
+透過本專案學會：
+
+- LocalStorage 只能儲存字串
+- Object 與 Array 的差異
+- JSON.stringify() 與 JSON.parse()
+- Null Check 與 Type Narrowing
+- DOM 更新資料
+- 使用 forEach() 渲染多筆資料
+
+---
+
+## 🚀 後續規劃
+
+- 修改 LocalStorage 資料
+- 刪除 LocalStorage 資料
+- 表單輸入
+- 動態購物車
+- Fetch API 串接
+
+---
+
+# 🇺🇸 English
+
+## 📖 Overview
+
+This project focuses on using **LocalStorage** with TypeScript to store, retrieve, and display data on a web page.
+
+The project includes two examples:
+
+- User Information
+- Shopping Cart
+
+It also demonstrates how Objects and Arrays are stored in LocalStorage using JSON serialization.
+
+---
+
+## 📚 What I Learned
+
+- localStorage.setItem()
+- localStorage.getItem()
+- JSON.stringify()
+- JSON.parse()
+- Objects and Arrays
+- string | null
+- Type Narrowing
+- Null Check
+- DOM Manipulation
+- textContent
+- innerHTML
+- Array.forEach()
+
+---
+
+## 🛠 Technologies
+
+- HTML5
+- TypeScript
+- LocalStorage API
+
+---
+
+## ✨ Features
+
+### 👤 User Information
+
+- Store user data in LocalStorage
+- Retrieve LocalStorage data
+- Parse JSON data
+- Display user information
+
+### 🛒 Shopping Cart
+
+- Store shopping cart array
+- Parse JSON data
+- Display multiple products
+- Render product list using forEach()
+
+---
+
+## 🎯 Learning Outcome
+
+Through this project I learned:
+
+- Why LocalStorage only stores strings
+- Difference between Objects and Arrays
+- JSON.stringify()
+- JSON.parse()
+- Null Check
+- Type Narrowing
+- DOM Manipulation
+- Rendering array data using forEach()
+
+---
+
+## 🚀 Future Improvements
+
+- Update LocalStorage
+- Remove LocalStorage
+- Dynamic shopping cart
+- Form input
+- Fetch API integration
+
+---
+
+# 🇯🇵 日本語
+
+## 📖 プロジェクト概要
+
+TypeScript を使用して **LocalStorage** にデータを保存・取得し、DOM に表示する方法を学習しました。
+
+今回は以下の 2 つのサンプルを作成しました。
+
+- ユーザー情報
+- ショッピングカート
+
+Object と Array を JSON へ変換し、LocalStorage に保存・取得する流れを理解しました。
+
+---
+
+## 📚 学習内容
+
+- localStorage.setItem()
+- localStorage.getItem()
+- JSON.stringify()
+- JSON.parse()
+- Object と Array
+- string | null
+- Type Narrowing
+- Null Check
+- DOM 操作
+- textContent
+- innerHTML
+- Array.forEach()
+
+---
+
+## 🛠 使用技術
+
+- HTML5
+- TypeScript
+- LocalStorage API
+
+---
+
+## ✨ 実装内容
+
+### 👤 ユーザー情報
+
+- LocalStorage に保存
+- データ取得
+- JSON を Object に変換
+- 画面へ表示
+
+### 🛒 ショッピングカート
+
+- 配列データを保存
+- JSON を解析
+- forEach() を利用して商品一覧を表示
+
+---
+
+## 🎯 学んだこと
+
+このプロジェクトを通して学んだこと：
+
+- LocalStorage は文字列のみ保存できること
+- Object と Array の違い
+- JSON.stringify()
+- JSON.parse()
+- Null Check
+- Type Narrowing
+- DOM 操作
+- forEach() による一覧表示
+
+---
+
+## 🚀 今後の改善
+
+- データ更新機能
+- データ削除機能
+- フォーム入力
+- 動的ショッピングカート
+- Fetch API との連携
