@@ -1,70 +1,186 @@
-# Day73_API_Response_Types
+# Day73 - API Response Types
 
-## 🇹🇼 中文
+## 中文
 
-### 今日主題
-API Response Types
+### 專案介紹
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+Day73 練習 TypeScript 與 Fetch API 的整合，學習如何取得 API 資料、建立 Interface 描述資料型別，以及利用型別斷言(Type Assertion)安全地存取 API 回傳內容。
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
-
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
-
-### 建議 Commit
-```bash
-git commit -m "Day73 API Response Types"
-```
+此外，也練習了 HTTP Status Code、錯誤處理（try...catch）以及巢狀物件（Nested Object）的使用方式。
 
 ---
 
-## 🇺🇸 English
+### 學習重點
 
-### Topic
-API Response Types
-
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
-
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
-
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+- Fetch API
+- async / await
+- Response 物件
+- response.json()
+- Interface
+- Type Assertion (`as`)
+- Object vs Array
+- User / User[]
+- HTTP Status Code
+- response.ok
+- response.status
+- try...catch
+- throw new Error()
+- Error Handling
+- Nested Object
+- Nested Interface
 
 ---
 
-## 🇯🇵 日本語
+### 本日完成內容
 
-### テーマ
-API Response Types
+- 使用 Fetch API 呼叫 REST API
+- 使用 async / await 處理非同步
+- 建立 Interface 定義 API 回傳資料
+- 使用 `as User`
+- 使用 `as User[]`
+- 判斷 HTTP Status
+- 使用 `response.ok`
+- 使用 try...catch 處理例外
+- 使用 `instanceof Error`
+- 建立巢狀 Interface
+- 讀取 Address、Geo、Company 等巢狀資料
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+---
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+### API
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+https://jsonplaceholder.typicode.com/
+
+---
+
+### 使用技術
+
+- HTML
+- TypeScript
+- Fetch API
+
+---
+
+## English
+
+### Project Overview
+
+Day73 focuses on integrating TypeScript with the Fetch API. This project demonstrates how to fetch data from REST APIs, define data structures using interfaces, and safely access API responses with Type Assertions.
+
+It also covers HTTP Status Codes, error handling using try...catch, and nested object structures.
+
+---
+
+### Learning Topics
+
+- Fetch API
+- async / await
+- Response Object
+- response.json()
+- Interface
+- Type Assertion (`as`)
+- Object vs Array
+- User / User[]
+- HTTP Status Codes
+- response.ok
+- response.status
+- try...catch
+- throw new Error()
+- Error Handling
+- Nested Object
+- Nested Interface
+
+---
+
+### Features
+
+- Fetch data from REST APIs
+- Handle asynchronous requests
+- Define API response types with interfaces
+- Use `as User`
+- Use `as User[]`
+- Check HTTP Status
+- Validate responses using `response.ok`
+- Handle errors with try...catch
+- Use `instanceof Error`
+- Create nested interfaces
+- Access nested Address, Geo and Company objects
+
+---
+
+### API
+
+https://jsonplaceholder.typicode.com/
+
+---
+
+### Technologies
+
+- HTML
+- TypeScript
+- Fetch API
+
+---
+
+## 日本語
+
+### プロジェクト概要
+
+Day73では、TypeScript と Fetch API を組み合わせた API 通信について学習しました。
+
+REST APIからデータを取得し、Interface を使ってレスポンスの型を定義し、Type Assertion を利用して安全にデータへアクセスする方法を練習しています。
+
+また、HTTPステータスコード、例外処理（try...catch）、ネストしたオブジェクト（Nested Object）の扱いについても学習しました。
+
+---
+
+### 学習内容
+
+- Fetch API
+- async / await
+- Response オブジェクト
+- response.json()
+- Interface
+- Type Assertion（`as`）
+- Object と Array
+- User / User[]
+- HTTP Status Code
+- response.ok
+- response.status
+- try...catch
+- throw new Error()
+- エラーハンドリング
+- ネストしたオブジェクト
+- ネストした Interface
+
+---
+
+### 実装内容
+
+- REST APIからデータ取得
+- async / await の利用
+- Interface による型定義
+- `as User`
+- `as User[]`
+- HTTPステータスの確認
+- `response.ok` による判定
+- try...catch による例外処理
+- `instanceof Error`
+- ネストした Interface の作成
+- Address・Geo・Company などのデータ取得
+
+---
+
+### API
+
+https://jsonplaceholder.typicode.com/
+
+---
+
+### 使用技術
+
+- HTML
+- TypeScript
+- Fetch API
+
+---
