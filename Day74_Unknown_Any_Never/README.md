@@ -1,70 +1,270 @@
-# Day74_Unknown_Any_Never
+# Day74 - Unknown / Any / Never / Generics
 
 ## 🇹🇼 中文
 
-### 今日主題
-Unknown Any Never
+### 📚 學習內容
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+Day74 主要學習 TypeScript 中較進階的型別概念，包含：
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+- unknown
+- any
+- never
+- Generic Function
+- Generic Interface
+- Generic API Response
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+### 💡 本日重點
 
-### 建議 Commit
-```bash
-git commit -m "Day74 Unknown Any Never"
+#### Unknown
+
+- unknown 是比 any 更安全的型別。
+- 使用前必須先進行型別判斷（Type Narrowing）。
+- 常用於 `catch(error)` 或未知資料來源。
+
+```ts
+if (error instanceof Error) {
+  console.log(error.message);
+}
 ```
+
+---
+
+#### Any
+
+- any 可以接受任何型別。
+- TypeScript 不會再檢查型別。
+- 雖然方便，但容易造成執行時錯誤，因此應避免過度使用。
+
+```ts
+let value: any = 'Tom';
+value.toFixed(); // TypeScript 不會報錯
+```
+
+---
+
+#### Never
+
+- never 表示永遠不會回傳值。
+- 常見於 throw Error 或無法執行完成的函式。
+
+```ts
+function throwError(): never {
+  throw new Error('Error');
+}
+```
+
+---
+
+#### Generic Function
+
+Generic 可以讓函式保持型別資訊，而不用使用 any。
+
+```ts
+function identity<T>(value: T): T {
+  return value;
+}
+```
+
+使用方式：
+
+```ts
+identity<number>(100);
+identity<string>('Tom');
+identity<boolean>(true);
+```
+
+---
+
+#### Generic Interface
+
+利用 Generic 建立可重複使用的 Interface。
+
+```ts
+interface Box<T> {
+  item: T;
+}
+```
+
+範例：
+
+```ts
+const apple: Box<string> = {
+  item: 'Apple',
+};
+
+const age: Box<number> = {
+  item: 30,
+};
+```
+
+---
+
+#### Generic API Response
+
+建立可套用於不同 API 的回傳型別。
+
+```ts
+interface ApiResponse<T> {
+  data: T;
+  message: string;
+  status: number;
+}
+```
+
+搭配 User：
+
+```ts
+const response: ApiResponse<User[]> = {
+  data: [...],
+  message: "Success",
+  status: 200,
+};
+```
+
+---
+
+### 🛠️ 本日練習
+
+- 練習 unknown 與 any 的差異
+- 使用 never 建立錯誤函式
+- 建立 Generic Function
+- 建立 Generic Interface
+- 建立 Generic API Response
+- 練習 API 回傳型別設計
+
+---
+
+### 🎯 學習成果
+
+- 理解 unknown、any、never 的用途
+- 能建立 Generic Function
+- 能建立 Generic Interface
+- 能設計 Generic API Response
+- 理解 Generic 在 React 中的重要性
 
 ---
 
 ## 🇺🇸 English
 
-### Topic
-Unknown Any Never
+### 📚 Topics
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
+- unknown
+- any
+- never
+- Generic Functions
+- Generic Interfaces
+- Generic API Response
 
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
+### 💡 Key Points
 
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+- Learn the differences between `unknown` and `any`.
+- Understand how `never` represents functions that never return.
+- Build reusable Generic Functions.
+- Create reusable Generic Interfaces.
+- Design Generic API response structures.
+
+### Example
+
+```ts
+function identity<T>(value: T): T {
+  return value;
+}
+```
+
+```ts
+interface ApiResponse<T> {
+  data: T;
+  message: string;
+  status: number;
+}
+```
+
+### Practice
+
+- Type narrowing
+- Error handling
+- Generic Functions
+- Generic Interfaces
+- API response modeling
+
+### Learning Outcome
+
+- Understand advanced TypeScript types.
+- Write reusable Generic code.
+- Build strongly typed API response models.
+- Prepare for React + TypeScript development.
 
 ---
 
 ## 🇯🇵 日本語
 
-### テーマ
-Unknown Any Never
+### 📚 学習内容
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+Day74では TypeScript の応用的な型について学習しました。
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+- unknown
+- any
+- never
+- Generic Function
+- Generic Interface
+- Generic API Response
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+### 💡 学習ポイント
+
+#### unknown
+
+- any より安全な型
+- 使用前に型チェックが必要
+- 主に `catch(error)` で使用される
+
+#### any
+
+- すべての型を許可する
+- TypeScript の型チェックを無効化する
+
+#### never
+
+- 戻り値が存在しない型
+- Error を throw する関数などで使用
+
+#### Generic Function
+
+```ts
+function identity<T>(value: T): T {
+  return value;
+}
+```
+
+#### Generic Interface
+
+```ts
+interface Box<T> {
+  item: T;
+}
+```
+
+#### Generic API Response
+
+```ts
+interface ApiResponse<T> {
+  data: T;
+  message: string;
+  status: number;
+}
+```
+
+### 🛠️ 練習内容
+
+- unknown と any の違い
+- never の使用方法
+- Generic Function の作成
+- Generic Interface の作成
+- Generic API Response の設計
+
+### 🎯 学習成果
+
+- unknown・any・never を理解
+- Generic の基本概念を習得
+- Generic Function を作成できる
+- Generic Interface を作成できる
+- React + TypeScript の基礎を身につけた
