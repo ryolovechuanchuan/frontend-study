@@ -1,70 +1,323 @@
-# Day75_TS_Modules
+# Day75 - TypeScript Modules
 
 ## 🇹🇼 中文
 
-### 今日主題
-TS Modules
+### 📚 學習內容
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+Day75 主要學習 TypeScript 的模組（Modules）概念，了解如何將程式拆分成多個檔案，提高程式的可維護性與重複使用性。
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+---
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+## 💡 本日重點
 
-### 建議 Commit
-```bash
-git commit -m "Day75 TS Modules"
+### 為什麼需要 Module？
+
+如果所有程式都寫在一個檔案：
+
+- 難以維護
+- 難以閱讀
+- 容易發生名稱衝突
+- 不利團隊合作
+
+透過 Module，可以依照功能拆分程式。
+
+例如：
+
+```text
+src
+│
+├── script.ts
+├── services
+├── utils
+├── models
+└── components
 ```
 
 ---
 
-## 🇺🇸 English
+### Named Export
 
-### Topic
-TS Modules
+使用 `export` 匯出指定的函式。
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
+```ts
+export function add(a: number, b: number) {
+  return a + b;
+}
+```
 
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
+匯入方式：
 
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+```ts
+import { add } from './utils/math.js';
+```
 
 ---
 
-## 🇯🇵 日本語
+### Multiple Exports
 
-### テーマ
-TS Modules
+同一個檔案可以匯出多個函式。
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+```ts
+export function add() {}
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+export function subtract() {}
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+export function multiply() {}
+```
+
+匯入：
+
+```ts
+import { add, subtract, multiply } from './utils/math.js';
+```
+
+---
+
+### Alias
+
+使用 `as` 重新命名。
+
+```ts
+import { add as plus } from './utils/math.js';
+```
+
+```ts
+console.log(plus(10, 20));
+```
+
+---
+
+### Module Folder Structure
+
+建立不同職責的資料夾。
+
+```text
+src
+│
+├── services
+│     ├── api.ts
+│     └── post.ts
+│
+├── utils
+│     ├── math.ts
+│     └── string.ts
+│
+├── models
+│     └── User.ts
+│
+└── script.ts
+```
+
+---
+
+### Services
+
+建立共用 API。
+
+```ts
+export function getUsers() {
+  return [
+    {
+      id: 1,
+      name: 'Tom',
+    },
+    {
+      id: 2,
+      name: 'Amy',
+    },
+  ];
+}
+```
+
+---
+
+### Utils
+
+建立共用工具函式。
+
+```ts
+export function capitalize(text: string) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+```
+
+---
+
+### Import Multiple Modules
+
+```ts
+import { add, subtract, multiply } from './utils/math.js';
+import { capitalize } from './utils/string.js';
+import { getUsers } from './services/api.js';
+import { getPost } from './services/post.js';
+```
+
+---
+
+### Practice
+
+- 建立 math Module
+- 建立 string Module
+- 建立 api Module
+- 建立 post Module
+- 建立 User Model
+- 練習 Named Export
+- 練習 Import
+- 練習 Alias
+- 練習跨資料夾 Import
+
+---
+
+## 🎯 學習成果
+
+- 理解 Module 的用途
+- 熟悉 export 與 import
+- 能建立共用 Utility Module
+- 能建立共用 Service Module
+- 理解大型專案資料夾結構
+- 為 React 專案做好準備
+
+---
+
+# 🇺🇸 English
+
+## 📚 Topics
+
+Day75 focused on TypeScript Modules and project organization.
+
+### Covered Topics
+
+- Why Modules are important
+- Named Export
+- Multiple Exports
+- Import
+- Import Alias (`as`)
+- Project Folder Structure
+- Services
+- Utilities
+- Models
+
+---
+
+### Named Export
+
+```ts
+export function add(a: number, b: number) {
+  return a + b;
+}
+```
+
+Import:
+
+```ts
+import { add } from './utils/math.js';
+```
+
+---
+
+### Folder Structure
+
+```text
+src
+│
+├── services
+├── utils
+├── models
+└── script.ts
+```
+
+---
+
+### Practice
+
+- Build reusable math utilities
+- Create string helper functions
+- Create API services
+- Organize project folders
+- Import multiple modules
+- Use aliases
+- Share interfaces across files
+
+---
+
+## 🎯 Learning Outcome
+
+- Understand the Module system
+- Write reusable functions
+- Organize a TypeScript project
+- Use Named Export and Import
+- Prepare for React project architecture
+
+---
+
+# 🇯🇵 日本語
+
+## 📚 学習内容
+
+Day75では TypeScript の Module（モジュール）について学習しました。
+
+### 学習項目
+
+- Module の必要性
+- export
+- import
+- Named Export
+- Multiple Export
+- Alias（as）
+- Services
+- Utils
+- Models
+- プロジェクト構成
+
+---
+
+### Named Export
+
+```ts
+export function add(a: number, b: number) {
+  return a + b;
+}
+```
+
+読み込み：
+
+```ts
+import { add } from './utils/math.js';
+```
+
+---
+
+### フォルダ構成
+
+```text
+src
+│
+├── services
+├── utils
+├── models
+└── script.ts
+```
+
+---
+
+### 練習内容
+
+- math Module の作成
+- string Utility の作成
+- API Service の作成
+- User Model の作成
+- Named Export の利用
+- Import の利用
+- Module の分割
+- フォルダ構成の整理
+
+---
+
+## 🎯 学習成果
+
+- Module の基本を理解した
+- export / import を使えるようになった
+- 共通 Utility を作成できる
+- Service Module を作成できる
+- TypeScript プロジェクトを整理できる
+- React 開発の基礎を身につけた
