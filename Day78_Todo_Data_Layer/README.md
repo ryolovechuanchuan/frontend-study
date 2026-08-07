@@ -1,70 +1,69 @@
-# Day78_Todo_Data_Layer
+# Day78 - Todo Data Layer
 
-## 🇹🇼 中文
+## 📌 Overview
 
-### 今日主題
-Todo Data Layer
+### 中文
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+Day78 建立了一個使用 TypeScript 製作的 Todo Data Layer，將 Todo 的資料結構、CRUD 操作與 DOM 顯示邏輯分離。
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+本次練習從 `Todo` Interface 開始，建立 Todo 資料陣列，並實作新增、查詢、更新與刪除功能。
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+接著將 Data Layer 與 DOM 結合，讓使用者可以透過畫面新增 Todo、刪除 Todo，以及切換 Todo 的完成狀態。
 
-### 建議 Commit
-```bash
-git commit -m "Day78 Todo Data Layer"
+透過這次練習，進一步理解資料層（Data Layer）、CRUD、模組拆分，以及資料更新後重新渲染 UI 的基本流程。
+
+### English
+
+In Day78, I built a Todo Data Layer using TypeScript and separated the Todo data structure, CRUD operations, and DOM rendering logic.
+
+The practice started by defining a `Todo` interface and creating a Todo data array. CRUD functions were then implemented for creating, reading, updating, and deleting Todo items.
+
+The Data Layer was also connected to the DOM so users can add Todos, delete Todos, and toggle their completion status through the UI.
+
+This practice helped me understand the basic concepts of the Data Layer, CRUD operations, module separation, and re-rendering the UI after data changes.
+
+### 日本語
+
+Day78では、TypeScriptを使用してTodoのData Layerを作成し、Todoのデータ構造、CRUD処理、DOMの表示処理を分離しました。
+
+まず `Todo` Interfaceを定義し、Todoデータの配列を作成しました。その後、Todoの追加・取得・更新・削除を行うCRUD機能を実装しました。
+
+さらにData LayerとDOMを連携させ、画面からTodoの追加、削除、完了状態の切り替えができるようにしました。
+
+今回の練習を通して、Data Layer、CRUD、モジュール分割、データ更新後にUIを再描画する基本的な流れについて理解を深めました。
+
+---
+
+## 🎯 Learning Goals / 學習目標 / 学習目標
+
+- Understand how to define a Todo data model with TypeScript Interface
+- Work with arrays of objects using `Todo[]`
+- Build a simple Data Layer
+- Implement CRUD operations
+- Use `find()` and `findIndex()`
+- Use `push()` and `splice()`
+- Separate Model, Data Layer, and UI logic
+- Use `import` / `export`
+- Render Todo data to the DOM
+- Create DOM elements dynamically
+- Handle button click events
+- Re-render the UI after data changes
+- Toggle boolean values
+- Generate IDs for new Todo items
+
+---
+
+## 🗂 Project Structure / 專案結構 / プロジェクト構成
+
+```text
+Day78_Todo_Data_Layer/
+│
+├── index.html
+├── script.ts
+│
+├── data/
+│   └── todoData.ts
+│
+└── models/
+    └── models.ts
 ```
-
----
-
-## 🇺🇸 English
-
-### Topic
-Todo Data Layer
-
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
-
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
-
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
-
----
-
-## 🇯🇵 日本語
-
-### テーマ
-Todo Data Layer
-
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
-
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
-
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す

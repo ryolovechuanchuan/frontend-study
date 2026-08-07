@@ -154,6 +154,7 @@ class Employee extends Person {
 const jack = new Employee('Jack', 28, 'Google', 80000);
 console.log(jack.introduce());
 
+//rectangle
 class Rectangle {
   constructor(
     public width: number,
@@ -197,3 +198,66 @@ cart.addItem('Banana');
 cart.addItem('Milk');
 
 console.log(cart.showItems());
+
+//todolist
+let result = '';
+class TodoList {
+  constructor(public todos: string[]) {}
+
+  addTodo(todo: string) {
+    this.todos.push(todo);
+  }
+
+  showTodos() {
+    this.todos.forEach((item, index) => {
+      result += index + 1 + '.' + item + '\n';
+    });
+    return result;
+  }
+
+  removeTodo(index: number) {
+    this.todos.splice(index, 1);
+  }
+}
+
+const todoList = new TodoList([]);
+
+todoList.addTodo('Study TypeScript');
+todoList.addTodo('Learn React');
+todoList.addTodo('Build Porfolio');
+
+console.log(todoList.showTodos());
+todoList.removeTodo(1);
+console.log(todoList.showTodos());
+
+//Library
+
+let bookResult = '';
+class Library {
+  constructor(public books: string[]) {}
+
+  addBook(book: string) {
+    this.books.push(book);
+  }
+  removeBook(index: number) {
+    this.books.splice(index, 1);
+  }
+  showBook() {
+    this.books.forEach((item, index) => {
+      bookResult += index + 1 + '.' + item + '\n';
+    });
+    return bookResult;
+  }
+}
+
+const library = new Library([]);
+
+library.addBook('Java');
+library.addBook('Spring Boot');
+library.addBook('TypeScript');
+
+library.showBook();
+
+library.removeBook(1);
+
+library.showBook();
