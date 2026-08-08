@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Day80_Todo_Storage</h1>
+    <input type="text" id="todoInput" placeholder="請輸入資料" />
+    <button id="addBtn">Add Todo</button>
+    <br />
+    <div id="todofilter">
+      <button id="allBtn">All</button>
+      <button id="pendingBtn">Pending</button>
+      <button id="completedBtn">Completed</button>
+    </div>
+    <div id="todo-stars">
+      <p id="totalcount">Total:</p>
+      <p id="completedcount">Completed:</p>
+      <p id="pendingcount">Pendingcount:</p>
+    </div>
+    <ul id="todoList"></ul>
+    <script type="module" src="./src/script.js"></script>
+  </body>
+</html>
