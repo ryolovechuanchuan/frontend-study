@@ -2,69 +2,275 @@
 
 ## 🇹🇼 中文
 
-### 今日主題
-Testing Basics
+### 📚 今日重點
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+Day84 學習 TypeScript 的 Testing 基礎，以及如何使用 Vitest 建立 Unit Test（單元測試）。
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+Testing 的核心：
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+```text
+執行程式
+↓
+取得實際結果 Actual
+↓
+與預期結果 Expected 比較
+↓
+PASS / FAIL
+```
 
-### 建議 Commit
+### 1. AAA Pattern
+
+Unit Test 常見思考流程：
+
+```text
+Arrange → 準備測試資料
+Act     → 執行要測試的程式
+Assert  → 確認結果
+```
+
+```ts
+const price = 100;
+const quantity = 3;
+
+const result = calculateTotal(price, quantity);
+
+expect(result).toBe(300);
+```
+
+### 2. Vitest
+
+安裝：
+
 ```bash
-git commit -m "Day84 Testing Basics"
+npm install -D vitest
+```
+
+基本使用：
+
+```ts
+import { describe, expect, test } from 'vitest';
+```
+
+### 3. test()
+
+`test()` 代表一個 Test Case。
+
+```ts
+test('2 should be even', () => {
+  expect(isEven(2)).toBe(true);
+});
+```
+
+### 4. expect() + Matcher
+
+基本格式：
+
+```ts
+expect(實際結果).Matcher(預期結果);
+```
+
+例如：
+
+```ts
+expect(isEven(2)).toBe(true);
+```
+
+### 5. 常用 Matcher
+
+```text
+toBe()
+→ number / string / boolean
+
+toEqual()
+→ Object / Array
+
+toBeUndefined()
+→ undefined
+
+toBeNull()
+→ null
+
+toContain()
+→ Array / String 包含某個值
+
+toThrow()
+→ 是否拋出 Error
+```
+
+### 6. Object Test
+
+```ts
+test('user should be found', () => {
+  expect(getUser(1)).toEqual({
+    id: 1,
+    name: 'John',
+  });
+});
+```
+
+### 7. undefined Test
+
+`find()` 找不到資料會回傳 `undefined`。
+
+```ts
+test('user should be undefined', () => {
+  expect(getUser(999)).toBeUndefined();
+});
+```
+
+### 8. Error Test
+
+```ts
+function divide(a: number, b: number): number {
+  if (b === 0) {
+    throw new Error('Cannot divide by zero');
+  }
+
+  return a / b;
+}
+```
+
+測試 Error：
+
+```ts
+test('divide by zero should throw', () => {
+  expect(() => divide(20, 0)).toThrow();
+});
+```
+
+注意：
+
+```ts
+expect(() => divide(20, 0)).toThrow();
+```
+
+而不是：
+
+```ts
+expect(divide(20, 0)).toThrow();
+```
+
+### 9. describe()
+
+將相關 Tests 分組：
+
+```ts
+describe('isEven', () => {
+  test('2 is even', () => {
+    expect(isEven(2)).toBe(true);
+  });
+
+  test('3 is not even', () => {
+    expect(isEven(3)).toBe(false);
+  });
+});
+```
+
+### 10. Test Case 思考
+
+不要只測正常資料，也要考慮：
+
+```text
+Normal Case   → 一般情況
+Boundary Case → 邊界值
+Edge Case     → 特殊情況
+Error Case    → 錯誤情況
 ```
 
 ---
 
 ## 🇺🇸 English
 
-### Topic
-Testing Basics
+### Key Points
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
+Day84 focuses on Unit Testing with TypeScript and Vitest.
 
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
+Testing compares the actual result with the expected result.
 
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+```text
+Arrange → Prepare data
+Act     → Execute code
+Assert  → Verify result
+```
+
+Basic Vitest syntax:
+
+```ts
+test('2 should be even', () => {
+  expect(isEven(2)).toBe(true);
+});
+```
+
+Common Matchers:
+
+```text
+toBe()          → Primitive values
+toEqual()       → Objects / Arrays
+toBeUndefined() → undefined
+toBeNull()      → null
+toContain()     → Contains value
+toThrow()       → Error
+```
+
+Tests should cover normal, boundary, edge, and error cases.
 
 ---
 
 ## 🇯🇵 日本語
 
-### テーマ
-Testing Basics
+### 今日のポイント
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+Day84ではTypeScriptとVitestを使ったUnit Test（単体テスト）の基礎を学習しました。
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+基本的な考え方：
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+```text
+Arrange → テストデータを準備
+Act     → 処理を実行
+Assert  → 結果を確認
+```
+
+基本構文：
+
+```ts
+test('2 should be even', () => {
+  expect(isEven(2)).toBe(true);
+});
+```
+
+よく使うMatcher：
+
+```text
+toBe()          → 基本型
+toEqual()       → Object / Array
+toBeUndefined() → undefined
+toBeNull()      → null
+toContain()     → 値を含むか確認
+toThrow()       → Errorを確認
+```
+
+正常なケースだけではなく、境界値やエラーケースもテストすることが重要です。
+
+---
+
+## Day84 Summary
+
+```text
+Unit Test
+↓
+Arrange / Act / Assert
+↓
+test()
+↓
+expect()
+↓
+Matcher
+↓
+PASS / FAIL
+```
+
+**Testing helps detect bugs automatically and prevents existing functionality from breaking after code changes.**
+
+**テストによってバグを自動的に検出し、コード変更による既存機能の破壊を防ぐことができます。**
+
+**測試可以自動發現錯誤，並降低修改程式後破壞既有功能的風險。**
