@@ -1,70 +1,274 @@
-# Day85_Expense_Planner
+# Day85 - Expense Planner
 
-## 🇹🇼 中文
+A simple Expense Planner built with TypeScript.  
+Practice DOM manipulation, array methods, filtering, state management, LocalStorage, and responsive UI.
 
-### 今日主題
-Expense Planner
+TypeScriptで作成したシンプルな支出管理アプリです。  
+DOM操作、配列操作、フィルター、状態管理、LocalStorage、RWDを練習しました。
 
-### 課程定位
-依照當日主題完成概念理解、程式練習與可驗證成果，避免只看不做。
+使用 TypeScript 製作的簡易支出管理系統。  
+練習 DOM 操作、陣列處理、分類篩選、狀態管理、LocalStorage 與 RWD。
 
-### 今日任務
-- 理解並用自己的話說明核心概念
-- 完成當日指定的程式或專案里程碑
-- 處理至少一個錯誤、空狀態或邊界案例
-- 確認 Console 沒有未處理錯誤
-- 更新三語 README 並提交 Git commit
+---
 
-### 完成標準
-- 功能可以正常執行
-- 能說明資料流與主要程式結構
-- 至少保留一個可驗證成果：程式、畫面、測試、截圖或部署網址
+## 📚 What I Learned / 學習內容 / 学習内容
 
-### 建議 Commit
-```bash
-git commit -m "Day85 Expense Planner"
+### 1. Interface
+
+```ts
+interface Expense {
+  id: number;
+  title: string;
+  amount: number;
+  category: string;
+  date: string;
+}
+```
+
+- Define the structure of expense data.
+- 定義支出資料的型別結構。
+- 支出データの型を定義。
+
+---
+
+### 2. Expense Array
+
+```ts
+let expenses: Expense[] = [];
+```
+
+Use `Expense[]` to manage multiple expense objects.
+
+使用 `Expense[]` 管理多筆支出資料。
+
+`Expense[]` を使用して複数の支出データを管理。
+
+---
+
+### 3. Add Expense
+
+```ts
+function addExpense(expense: Expense): Expense[] {
+  expenses.push(expense);
+  return expenses;
+}
+```
+
+Add new data with `push()`.
+
+使用 `push()` 新增支出。
+
+`push()` で新しい支出を追加。
+
+---
+
+### 4. Delete Expense
+
+```ts
+function deleteExpense(id: number): Expense[] {
+  const index = expenses.findIndex((item) => item.id === id);
+
+  if (index !== -1) {
+    expenses.splice(index, 1);
+  }
+
+  return expenses;
+}
+```
+
+Use `findIndex()` + `splice()` to delete an expense.
+
+使用 `findIndex()` + `splice()` 刪除指定資料。
+
+`findIndex()` + `splice()` で指定したデータを削除。
+
+---
+
+### 5. Calculate Total
+
+```ts
+function calculateTotalExpense(): number {
+  let sum = 0;
+
+  expenses.forEach((item) => {
+    sum += item.amount;
+  });
+
+  return sum;
+}
+```
+
+Use `forEach()` to calculate the total amount.
+
+使用 `forEach()` 計算總支出。
+
+`forEach()` で支出合計を計算。
+
+---
+
+### 6. Category Filter
+
+```ts
+function filterExpensesByCategory(category: string): Expense[] {
+  return expenses.filter((item) => item.category === category);
+}
+```
+
+Filter expenses by `Food` or `Transport`.
+
+依照 `Food`、`Transport` 篩選資料。
+
+`Food`、`Transport` ごとに支出を絞り込み。
+
+---
+
+### 7. Default Parameter & Render
+
+```ts
+function renderExpense(targetList = getExpense()): void {
+  targetList.forEach((item) => {
+    // Render expense
+  });
+}
+```
+
+If no argument is passed, `getExpense()` becomes the default value.
+
+沒有傳入參數時，使用 `getExpense()` 的回傳值。
+
+引数がない場合、`getExpense()` の戻り値を使用。
+
+---
+
+### 8. Current Filter State
+
+```ts
+let currentFilter = 'All';
+```
+
+Keep the current filter state when adding or deleting data.
+
+新增或刪除後，保持目前的篩選狀態。
+
+追加・削除後も現在のフィルター状態を維持。
+
+```text
+State
+↓
+Get filtered data
+↓
+Render UI
 ```
 
 ---
 
-## 🇺🇸 English
+### 9. LocalStorage
 
-### Topic
-Expense Planner
+Save:
 
-### Course Purpose
-Understand the topic, complete practical exercises, and produce a verifiable result.
+```ts
+localStorage.setItem('data', JSON.stringify(expenses));
+```
 
-### Tasks
-- Explain the core concept in your own words
-- Complete the assigned exercise or project milestone
-- Handle at least one error, empty state, or edge case
-- Verify there are no unhandled console errors
-- Update the trilingual README and commit the work
+Load:
 
-### Completion Criteria
-- The feature runs correctly
-- The data flow and main structure can be explained
-- At least one verifiable result is saved: code, UI, test, screenshot, or deployment
+```ts
+const data = localStorage.getItem('data');
+
+if (data) {
+  expenses = JSON.parse(data);
+}
+```
+
+`JSON.stringify()` converts data to string.  
+`JSON.parse()` converts string back to data.
+
+`JSON.stringify()` 將資料轉成字串。  
+`JSON.parse()` 將字串還原成資料。
+
+`JSON.stringify()` で文字列に変換。  
+`JSON.parse()` でデータに戻す。
 
 ---
 
-## 🇯🇵 日本語
+### 10. Responsive Layout
 
-### テーマ
-Expense Planner
+```css
+.input-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-### 学習目的
-当日のテーマを理解し、実践課題と確認可能な成果物を完成させます。
+@media (max-width: 600px) {
+  .input-area {
+    grid-template-columns: 1fr;
+  }
+}
+```
 
-### 今日の課題
-- 中心となる概念を自分の言葉で説明する
-- 指定された練習、または制作工程を完成する
-- エラー、空状態、境界値のうち少なくとも一つを処理する
-- Console に未処理エラーがないことを確認する
-- 3言語 README を更新し、Git にコミットする
+Desktop: 2 × 2  
+Mobile: 1 × 4
 
-### 完了条件
-- 機能が正常に動作する
-- データの流れと主要な構成を説明できる
-- コード、画面、テスト、スクリーンショット、デプロイのいずれかを成果として残す
+桌面版：2 × 2  
+手機版：1 × 4
+
+PC：2 × 2  
+スマホ：1 × 4
+
+---
+
+## 🔄 Application Flow
+
+```text
+User Input
+↓
+Create Expense Object
+↓
+addExpense()
+↓
+expenses[]
+↓
+saveLocalStorage()
+↓
+getCurrentExpenses()
+↓
+renderExpense()
+↓
+Update UI
+```
+
+---
+
+## 🛠 Technologies
+
+- HTML5
+- CSS3
+- TypeScript
+- DOM API
+- LocalStorage
+- CSS Grid
+- Responsive Design
+
+---
+
+## ✅ Features
+
+- Add expense
+- Delete expense
+- Calculate total expenses
+- Filter by category
+- Maintain current filter
+- Save data with LocalStorage
+- Restore saved data
+- Responsive 2×2 / 1×4 form
+- Type-safe expense data
+
+---
+
+## 💡 Key Takeaway
+
+Day85 connected multiple TypeScript concepts into one small application.
+
+Day85 將 TypeScript、DOM、Array、State、LocalStorage 與 RWD 串成一個完整的小型實戰。
+
+Day85では TypeScript、DOM、配列、State、LocalStorage、RWDを組み合わせ、実際に動作する小規模アプリを作成しました。
