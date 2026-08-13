@@ -10,6 +10,7 @@ const transportBtn = document.getElementById('transportBtn') as HTMLButtonElemen
 const categorySelect = document.getElementById('categorySelect') as HTMLSelectElement | null;
 
 let currentFilter = 'All';
+const regex = /^\d{4}-\d{2}-\d{2}$/;
 
 let expenses: Expense[] = [
   {
@@ -120,23 +121,29 @@ function renderExpense(targetlist = getExpense()): void {
 
 addBtn?.addEventListener('click', () => {
   if (titleInput && amountInput && categorySelect && dateInput) {
-    const index = expenses.length;
-    const data: Expense = {
-      id: expenses.length === 0 ? 1 : expenses[index - 1].id + 1,
-      title: titleInput.value,
-      amount: Number(amountInput.value) || 0,
-      category: categorySelect.value,
-      date: dateInput.value,
-    };
+    if (regex.test(dateInput.value)) {
+      const index = expenses.length;
+      const data: Expense = {
+        id: expenses.length === 0 ? 1 : expenses[index - 1].id + 1,
+        title: titleInput.value,
+        amount: Number(amountInput.value) || 0,
+        category: categorySelect.value,
+        date: dateInput.value,
+      };
 
-    addExpense(data);
-    saveLocalStorage();
-    renderExpense(getCurrentExpenses());
-    // clear inputs
-    titleInput.value = '';
-    amountInput.value = '';
-    categorySelect.value = '請選擇分類';
-    dateInput.value = '';
+      addExpense(data);
+      saveLocalStorage();
+      renderExpense(getCurrentExpenses());
+      // clear inputs
+      titleInput.value = '';
+      amountInput.value = '';
+      categorySelect.value = '請選擇分類';
+      dateInput.value = '';
+    } else {
+      alert('日期格式有誤，請重新輸入');
+      dateInput.value = '';
+      dateInput.focus();
+    }
   }
 });
 

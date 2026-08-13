@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Expense Tracker</h1>
+
+      <section class="summary">
+        <p>總支出</p>
+        <h2 id="total-expense">NT$ 0</h2>
+      </section>
+
+      <section>
+        <h2>支出紀錄</h2>
+
+        <div id="expense-list"></div>
+      </section>
+      <section class="expense-form-section">
+        <h2>新增支出</h2>
+
+        <form id="expense-form">
+          <div>
+            <label for="category">類別</label>
+
+            <select id="category">
+              <option value="餐飲">餐飲</option>
+              <option value="交通">交通</option>
+              <option value="購物">購物</option>
+              <option value="娛樂">娛樂</option>
+              <option value="其他">其他</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="amount">金額</label>
+
+            <input id="amount" type="number" min="1" required />
+          </div>
+
+          <div>
+            <label for="date">日期</label>
+
+            <input id="date" type="date" required />
+          </div>
+
+          <div>
+            <label for="note">備註</label>
+
+            <input id="note" type="text" />
+          </div>
+
+          <button type="submit">新增支出</button>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="./scr/main.js"></script>
+  </body>
+</html>
