@@ -1,0 +1,257 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family: Arial, 'Noto Sans TC', sans-serif;
+
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* =========================
+   主容器
+========================= */
+
+.container {
+  width: min(700px, 90%);
+  margin: 50px auto;
+}
+
+.container > h1 {
+  margin-bottom: 30px;
+
+  text-align: center;
+  font-size: 32px;
+}
+
+/* =========================
+   共用 section
+========================= */
+
+section {
+  margin-bottom: 24px;
+  padding: 24px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+/* =========================
+   總支出
+========================= */
+
+.summary {
+  text-align: center;
+}
+
+.summary p {
+  margin: 0;
+
+  font-size: 14px;
+  color: #777;
+}
+
+.summary h2 {
+  margin: 10px 0 0;
+
+  font-size: 36px;
+  color: #e74c3c;
+}
+
+/* =========================
+   Expense List
+========================= */
+
+#expense-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+/* =========================
+   每一筆 Expense
+========================= */
+
+.expense-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 16px;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+
+  background: #fafafa;
+}
+
+.expense-item > div {
+  flex: 1;
+}
+
+.expense-item h3 {
+  margin: 0 0 8px;
+
+  font-size: 18px;
+}
+
+.expense-item p {
+  margin: 4px 0;
+
+  font-size: 14px;
+  color: #777;
+}
+
+.expense-item strong {
+  white-space: nowrap;
+
+  font-size: 18px;
+}
+
+/* =========================
+   刪除按鈕
+========================= */
+
+.expense-item button {
+  padding: 8px 14px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #e74c3c;
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.expense-item button:hover {
+  background: #c0392b;
+}
+
+/* =========================
+   Form
+========================= */
+
+#expense-form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+#expense-form > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+/* =========================
+   Label
+========================= */
+
+#expense-form label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* =========================
+   Input / Select
+========================= */
+
+#expense-form input,
+#expense-form select {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  font-size: 16px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  background: white;
+
+  outline: none;
+}
+
+#expense-form input:focus,
+#expense-form select:focus {
+  border-color: #3498db;
+
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.15);
+}
+
+/* =========================
+   新增按鈕
+========================= */
+
+#expense-form button {
+  grid-column: 1 / -1;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #3498db;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+#expense-form button:hover {
+  background: #2980b9;
+}
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+    margin: 25px auto;
+  }
+
+  section {
+    padding: 18px;
+  }
+
+  #expense-form {
+    grid-template-columns: 1fr;
+  }
+
+  #expense-form button {
+    grid-column: auto;
+  }
+
+  .expense-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
