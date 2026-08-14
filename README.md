@@ -2,7 +2,7 @@
 
 # 前端工程師學習之旅 🚀
 
-# フロントエンドエンジニア学習記録 🚀
+# フロントエンドエンジニアとバックエンドエンジニア学習記録 🚀
 
 ---
 
@@ -10,17 +10,17 @@
 
 ### 中文
 
-大家好，我是 Ryo，目前正從銀行業轉職成為前端工程師，目標是在日本擔任 Frontend Engineer。
+大家好，我是 Ryo，目前正從銀行業轉職成為前端工程師，目標是在日本擔任 Frontend Engineer 或是 backend engineer。
 
 ### English
 
 Hi, I'm Ryo from Taiwan.
-I am currently transitioning from the banking industry to become a Frontend Engineer in Japan.
+I am currently transitioning from the banking industry to become a Frontend Engineer or backend engineer in Japan.
 
 ### 日本語
 
 こんにちは、Ryoです。
-現在、銀行の情報システム部からフロントエンドエンジニアへの転職を目指して勉強しています。
+現在、銀行の情報システム部からフロントエンドエンジニア又はバックエンドエンジニアへの転職を目指して勉強しています。
 将来は日本で働くことが目標です。
 
 ---
@@ -29,7 +29,7 @@ I am currently transitioning from the banking industry to become a Frontend Engi
 
 ### 中文
 
-- 成為日本前端工程師
+- 成為日本前端或後端工程師
 - 建立完整作品集
 - 持續每天學習與紀錄
 
@@ -41,7 +41,7 @@ I am currently transitioning from the banking industry to become a Frontend Engi
 
 ### 日本語
 
-- 日本でフロントエンドエンジニアとして働く
+- 日本でフロントエンドエンジニア又はバックエンドエンジニアとして働く
 - ポートフォリオを作成する
 - 毎日学習し、GitHubに記録を残す
 
