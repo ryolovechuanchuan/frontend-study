@@ -17,14 +17,13 @@ function loadStorage() {
         return [];
     }
     try {
-        return JSON.parse(data);
+        return JSON.parse(data); //如果裡面有假資料或是資料有誤
     }
     catch {
         return null;
     }
 }
-const storedExpense = loadStorage();
-const expenses = storedExpense ?? [
+const expenses = loadStorage() ?? [
     {
         id: 1,
         category: '餐飲',
